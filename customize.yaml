@@ -1,0 +1,245 @@
+# Person
+person.ashish_upadhayay:
+  entity_picture: /local/ashish.png
+person.archana_maharjan:
+  entity_picture: /local/archana.png
+
+# Tuya Switch
+switch.2805375584f3eb78a549_1:
+  friendly_name: Hallway Light
+  icon: mdi:lightbulb
+switch.2805375584f3eb78a549_2:
+  friendly_name: Porch Light
+  icon: mdi:lightbulb
+switch.2805375584f3eb78a549_3:
+  friendly_name: Porch Accent Light
+  icon: mdi:track-light
+switch.61308075ecfabc3082f8:
+  friendly_name: Master Bedroom Light
+  icon: mdi:lightbulb
+switch.28053755bcddc2219b59_1:
+  friendly_name: Bathroom Light
+  icon: mdi:lightbulb
+switch.28053755bcddc2219b59_2:
+  friendly_name: Bathroom Downlight
+  icon: mdi:lightbulb
+switch.28053755bcddc2219b59_3:
+  friendly_name: Bathroom Exhaust
+  icon: mdi:fan
+switch.613080753c71bf30c177:
+  friendly_name: Toilet Light
+  icon: mdi:lightbulb
+switch.613080753c71bf30c321:
+  friendly_name: Wardrobe Light
+  icon: mdi:lightbulb
+switch.61308075ecfabc308206:
+  friendly_name: Garage Light
+  icon: mdi:lightbulb
+switch.61308075ecfabc3083f8:
+  friendly_name: Kids Bedroom Light
+  icon: mdi:lightbulb
+switch.1745257568c63aeea6d7_1:
+  friendly_name: Kids Bathroom Light
+  icon: mdi:lightbulb
+switch.1745257568c63aeea6d7_2:
+  friendly_name: Kids Bathroom Downlight
+  icon: mdi:lightbulb
+switch.17452575500291642e2b_1:
+  friendly_name: Kids Toilet Light
+  icon: mdi:lightbulb
+switch.17452575500291642e2b_2:
+  friendly_name: Kids Toilet Exhaust
+  icon: mdi:fan
+switch.7835046550029164312a:
+  friendly_name: Laundry Light
+  icon: mdi:lightbulb
+switch.61308075ecfabc30872d:
+  friendly_name: Guest Bedroom Light
+  icon: mdi:lightbulb
+switch.61308075ecfabc2ffaa0:
+  friendly_name: Media Room Light
+  icon: mdi:lightbulb
+switch.2805375584f3eb78abc5_1:
+  friendly_name: Living Room Light
+  icon: mdi:lightbulb
+switch.2805375584f3eb78abc5_2:
+  friendly_name: Kitchen Light
+  icon: mdi:lightbulb
+switch.2805375584f3eb78abc5_3:
+  friendly_name: Dining Light
+  icon: mdi:lightbulb
+switch.783504655002916432f4:
+  friendly_name: Pantry Light
+  icon: mdi:lightbulb
+switch.61308075ecfabc301587:
+  friendly_name: Alfresco Light
+  icon: mdi:lightbulb
+
+# Tuya Lightstrip
+light.20363802d8bfc00c2851:
+  friendly_name: Workstation RGB Lightstrip
+  icon: mdi:led-strip-variant
+light.20363802d8bfc00c2df5:
+  friendly_name: Kids Bedroom RGB Lightstrip
+  icon: mdi:led-strip-variant
+
+# Tuya Light
+light.0378700684f3ebd05c9a:
+  friendly_name: Kids Bedroom Desk Lamp
+  icon: mdi:desk-lamp
+
+# Hue
+light.master_bedroom_lamp:
+  friendly_name: Master Bedroom Table Lamp
+  icon: mdi:lamp
+light.guest_bedroom_lamp:
+  friendly_name: Guest Bedroom Table Lamp
+  icon: mdi:lamp
+light.media_room_lamp:
+  friendly_name: Media Room Floor Lamp
+  icon: mdi:floor-lamp
+light.kitchen_lightstrip:
+  friendly_name: Kitchen RGB Lightstrip
+  icon: mdi:led-strip-variant
+
+# Meross
+cover.garage_door:
+  friendly_name: Garage Door
+  icon: mdi:garage
+switch.washing_machine:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+switch.av_receiver:
+  friendly_name: AV Receiver
+  icon: mdi:amplifier
+switch.projector:
+  friendly_name: Projector
+  icon: mdi:projector
+switch.dishwasher:
+  friendly_name: Dishwasher
+  icon: mdi:dishwasher
+switch.workstation:
+  friendly_name: Workstation
+  icon: mdi:desktop-classic
+switch.lightstrip:
+  friendly_name: Master Bedroom Accent Light
+  icon: mdi:track-light
+
+# Samsung/Smartthings
+binary_sensor.front_door_mp_sensor_contact:
+  friendly_name: Front Door Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.front_door_mp_sensor_temperature_measurement:
+  friendly_name: Front Door Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.front_door_mp_sensor_battery:
+  friendly_name: Front Door Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
+sensor.kids_bedroom_button_temperature_measurement:
+  friendly_name: Kids Bedroom Button Temperature
+  icon: mdi:thermometer
+sensor.kids_bedroom_button_battery:
+  friendly_name: Kids Bedroom Button Battery
+  icon: mdi:battery-heart-variant
+sensor.robot_vacuum_robot_cleaner_movement:
+  friendly_name: Status
+  icon: mdi:information
+sensor.robot_vacuum_robot_cleaner_turbo_mode:
+  friendly_name: Turbo Mode
+  icon: mdi:run-fast
+scene.robot_vacuum_start:
+  friendly_name: Cleanup
+  icon: mdi:broom
+scene.robot_vacuum_stop:
+  friendly_name: Recharge
+  icon: mdi:stop-circle
+switch.tv_samsung_6_series_60:
+  friendly_name: Living Room TV
+  icon: mdi:television-classic
+switch.armed:
+  friendly_name: Armed
+  icon: mdi:lock
+
+# Ring
+binary_sensor.ring_video_doorbell_motion:
+  friendly_name: Ring Video Doorbell Motion
+  icon: mdi:motion-sensor
+sensor.ring_video_doorbell_battery:
+  friendly_name: Ring Video Doorbell Battery
+  icon: mdi:battery-heart-variant
+
+# IKEA
+binary_sensor.hallway_motion_sensor_motion:
+  friendly_name: Hallway Motion
+  icon: mdi:motion-sensor
+sensor.hallway_motion_sensor_battery:
+  friendly_name: Hallway Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.master_bedroom_motion_sensor_motion:
+  friendly_name: Master Bedroom Motion
+  icon: mdi:motion-sensor
+sensor.master_bedroom_motion_sensor_battery:
+  friendly_name: Master Bedroom Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.wardrobe_motion_sensor_motion:
+  friendly_name: Wardrobe Motion
+  icon: mdi:motion-sensor
+sensor.wardrobe_motion_sensor_battery:
+  friendly_name: Wardrobe Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.kids_bedroom_motion_sensor_motion:
+  friendly_name: Kids Bedroom Motion
+  icon: mdi:motion-sensor
+sensor.kids_bedroom_motion_sensor_battery:
+  friendly_name: Kids Bedroom Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.kids_bathroom_motion_sensor_motion:
+  friendly_name: Kids Bathroom Motion
+  icon: mdi:motion-sensor
+sensor.kids_bathroom_motion_sensor_battery:
+  friendly_name: Kids Bathroom Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.living_room_motion_sensor_motion:
+  friendly_name: Living Room Motion
+  icon: mdi:motion-sensor
+sensor.living_room_motion_sensor_battery:
+  friendly_name: Living Room Motion Sensor Battery
+  icon: mdi:battery-heart-variant
+
+# Google Nest WiFi
+sensor.google_wifi_status:
+  friendly_name: WiFi
+  icon: mdi:wifi
+sensor.google_wifi_uptime:
+  friendly_name: Uptime
+  icon: mdi:timer
+sensor.google_wifi_local_ip:
+  friendly_name: Local IP
+  icon: mdi:ip-network
+
+# SEMS Portal
+sensor.pv_outputpower:
+  friendly_name: Power Output
+  icon: mdi:solar-power
+sensor.pv_iday:
+  friendly_name: Today's Income
+  icon: mdi:piggy-bank
+sensor.pv_itotal:
+  friendly_name: Total Income
+  icon: mdi:trophy
+
+# Ashish Pixel 3
+device_tracker.ashish_pixel_3:
+  friendly_name: Ashish Pixel 3
+  icon: mdi:cellphone-android
+sensor.ashish_pixel_3_battery_level:
+  friendly_name: Ashish Pixel 3 Battery Level
+  icon: mdi:battery-heart-variant
+
+# Archana Pixel 3
+device_tracker.archana_pixel_3:
+  friendly_name: Archana Pixel 3
+  icon: mdi:cellphone-android
+sensor.archana_pixel_3_battery_level:
+  friendly_name: Archana Pixel 3 Battery Level
+  icon: mdi:battery-heart-variant

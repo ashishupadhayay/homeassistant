@@ -1,0 +1,98 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Theme
+frontend:
+  themes: !include themes.yaml
+
+# Camera
+camera:
+  - platform: generic
+    name: Driveway Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret driveway_camera
+  - platform: generic
+    name: Front Door Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret front_door_camera
+  - platform: generic
+    name: Garage Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret garage_camera
+  - platform: generic
+    name: Living Room Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret living_room_camera
+  - platform: generic
+    name: Kids Bedroom Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret kids_bedroom_camera
+  - platform: generic
+    name: Backyard Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret backyard_camera
+
+# Sensor
+sensor:
+  - platform: qnap
+    host: 192.168.86.4
+    username: !secret qnap_username
+    password: !secret qnap_password
+    monitored_conditions:
+      - cpu_usage
+      - memory_percent_used
+      - volume_percentage_used
+  - platform: google_wifi
+  - platform: sems
+    username: !secret sems_username
+    password: !secret sems_password
+    station_id : !secret sems_station_id
+    scan_interval: 60
+  - platform: template
+    sensors:
+      pv_outputpower:
+        value_template: '{{ states.sensor.sems_portal.attributes.outputpower }}'
+        unit_of_measurement: 'W'
+        friendly_name: 'Power Output'
+      pv_temperature:
+        value_template: '{{ states.sensor.sems_portal.attributes.tempperature }}'
+        unit_of_measurement: 'C'
+        friendly_name: 'Temperature'
+      pv_eday:
+        value_template: '{{ states.sensor.sems_portal.attributes.eday }}'
+        unit_of_measurement: 'kWh'
+        friendly_name: 'Energy (Today)'
+      pv_etotal:
+        value_template: '{{ states.sensor.sems_portal.attributes.etotal }}'
+        unit_of_measurement: 'kWh'
+        friendly_name: 'Energy (Total)'
+      pv_iday:
+        value_template: '{{ states.sensor.sems_portal.attributes.iday }}'
+        unit_of_measurement: '$'
+        friendly_name: 'Income (Today)'
+      pv_itotal:
+        value_template: '{{ states.sensor.sems_portal.attributes.itotal }}'
+        unit_of_measurement: '$'
+        friendly_name: 'Income (Total)'
+
+# Garbage Collection
+garbage_collection:
+  sensors:
+  - name: Waste Collection
+    frequency: 'weekly'
+    collection_days: wed
+    verbose_state: true
+    verbose_format: '{days} days'
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+homeassistant:
+  customize: !include customize.yaml

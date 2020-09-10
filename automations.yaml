@@ -1,0 +1,358 @@
+- id: away
+  alias: Trigger - Away
+  trigger:
+    - platform: zone
+      event: leave
+      zone: zone.home
+      entity_id: person.ashish_upadhayay
+    - platform: zone
+      event: leave
+      zone: zone.home
+      entity_id: person.archana_maharjan
+  condition:
+    - condition: state
+      entity_id: person.ashish_upadhayay
+      state: not_home
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: person.archana_maharjan
+          state: not_home
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.armed
+    - service: scene.turn_on
+      data:
+        entity_id: scene.blackout
+  mode: single
+
+- id: home
+  alias: Trigger - Home
+  trigger:
+    - platform: zone
+      event: enter
+      zone: zone.home
+      entity_id: person.ashish_upadhayay
+    - platform: zone
+      event: enter
+      zone: zone.home
+      entity_id: person.archana_maharjan
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.armed
+  mode: single
+
+- id: sunrise
+  alias: Routine - Sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.dishwasher
+  mode: single
+
+- id: sunset
+  alias: Routine - Sunset
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.2805375584f3eb78a549_3
+        - switch.2805375584f3eb78a549_1
+  mode: single
+
+- id: bedtime-notification
+  alias: Notification - Bedtime
+  trigger:
+    platform: time
+    at: '20:45'
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.speakers
+        media_content_id: http://192.168.86.4:8123/local/notification.mp3
+        media_content_type: music
+    - delay: '3'
+    - service: tts.google_translate_say
+      data:
+        entity_id: media_player.speakers
+        message: Bedtime routine will start in 15 minutes.
+  mode: single
+
+- id: bedtime
+  alias: Routine - Bedtime
+  trigger:
+    platform: time
+    at: '21:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.night
+  mode: single
+
+- id: kbb-pushed
+  alias: Trigger - KB Button PUSHED
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      value: pushed
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_on
+  mode: single
+
+- id: kbb-double
+  alias: Trigger - KB Button DOUBLE
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      value: double
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_off
+  mode: single
+
+- id: kbb-held
+  alias: Trigger - KB Button HELD
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      value: held
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speakers
+        media_content_id: http://192.168.86.4:8123/local/notification.mp3
+        media_content_type: music
+    - delay: '3'
+    - service: tts.google_translate_say
+      data:
+        entity_id: media_player.bedroom_speakers
+        message: Ava needs some help.
+  mode: single
+
+- id: front-door-open
+  alias: Trigger - Front Door OPEN
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door_mp_sensor_contact
+    to: 'on'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.2805375584f3eb78a549_2
+  mode: single
+
+- id: front-door-close
+  alias: Trigger - Front Door CLOSE
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door_mp_sensor_contact
+    to: 'off'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.2805375584f3eb78a549_2
+  mode: single
+
+- id: hallway-motion-on
+  alias: Trigger - Hallway MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.hallway_motion_sensor_motion
+    to: 'on'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.2805375584f3eb78a549_1
+  mode: single
+
+- id: hallway-motion-off
+  alias: Trigger - Hallway MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.hallway_motion_sensor_motion
+    to: 'off'
+    for: '00:05:00'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.2805375584f3eb78a549_1
+  mode: single
+
+- id: master-bedroom-motion-off
+  alias: Trigger - Master Bedroom MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.master_bedroom_motion_sensor_motion
+    to: 'off'
+    for: '00:15:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.master_bedroom_off
+  mode: single
+
+- id: wardrobe-motion-on
+  alias: Trigger - Wardrobe MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wardrobe_motion_sensor_motion
+    to: 'on'
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '18:00:00'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.613080753c71bf30c321
+  mode: single
+
+- id: wardrobe-motion-off
+  alias: Trigger - Wardrobe MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.wardrobe_motion_sensor_motion
+    to: 'off'
+    for: '00:15:00'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.613080753c71bf30c321
+  mode: single
+
+- id: kids-bedroom-motion-on
+  alias: Trigger - Kids Bedroom MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kids_bedroom_motion_sensor_motion
+    to: 'on'
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_on
+  mode: single
+
+- id: kids-bedroom-motion-off
+  alias: Trigger - Kids Bedroom MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kids_bedroom_motion_sensor_motion
+    to: 'off'
+    for: '00:15:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_off
+  mode: single
+
+- id: kids-bathroom-motion-on
+  alias: Trigger - Kids Bathroom MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kids_bathroom_motion_sensor_motion
+    to: 'on'
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.1745257568c63aeea6d7_2
+        - switch.17452575500291642e2b_1
+  mode: single
+
+- id: kids-bathroom-motion-off
+  alias: Trigger - Kids Bathroom MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.kids_bathroom_motion_sensor_motion
+    to: 'off'
+    for: '00:15:00'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.1745257568c63aeea6d7_2
+        - switch.17452575500291642e2b_1
+  mode: single
+
+- id: living-room-motion-on
+  alias: Trigger - Living Room MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.living_room_motion_sensor_motion
+    to: 'on'
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.2805375584f3eb78abc5_1
+        - switch.2805375584f3eb78abc5_2
+  mode: single
+
+- id: living-room-motion-off
+  alias: Trigger - Living Room MOTION OFF
+  trigger:
+    platform: state
+    entity_id: binary_sensor.living_room_motion_sensor_motion
+    to: 'off'
+    for: '00:15:00'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.2805375584f3eb78abc5_1
+        - switch.2805375584f3eb78abc5_2
+  mode: single

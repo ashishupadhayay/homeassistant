@@ -1,0 +1,27 @@
+#
+# 67NAV HA Theme
+#
+67nav:
+  lovelace-background: center / cover no-repeat url("/local/background.png") fixed
+  primary-color: "#0288D1"
+  primary-background-color: "#0288D1"
+  primary-text-color: "#ffffff"
+
+  secondary-background-color: "#222222"
+  secondary-text-color: "#ffffff"
+
+  paper-card-background-color: "#222222"
+  card-background-color: "var(--paper-card-background-color)"
+
+  paper-item-icon-color: "#ffffff"
+  paper-item-icon-active-color: "#FFEB3B"
+
+  ha-card-background: "rgba(0, 0, 0, 0.3)"
+  ha-card-border-radius: 0px
+
+  label-badge-background-color: "rgba(0, 0, 0, 0.3)"
+  label-badge-red: "#0288D1"
+
+  # My Customisations
+  primary-font-family: "'PT Sans', sans-serif"
+  paper-font-common-base_-_font-family: "var(--primary-font-family)"

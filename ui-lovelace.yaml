@@ -1,0 +1,571 @@
+title: 67NAV
+views:
+  - badges:
+      - entity: person.ashish_upadhayay
+        name: Ashish
+      - entity: person.archana_maharjan
+        name: Archana
+      - entity: cover.garage_door
+        name: Garage
+      - entity: sensor.google_wifi_status
+        name: WiFi
+    cards:
+      - cards:
+          - type: conditional
+            card:
+              type: button
+              show_state: false
+              entity: switch.armed
+              icon_height: 48px
+            conditions:
+              - entity: switch.armed
+                state: 'on'
+          - type: horizontal-stack
+            cards:
+              - type: picture-entity
+                entity: person.ashish_upadhayay
+                image: /local/ashish.png
+                name: Ashish U
+                aspect_ratio: 0%
+              - type: picture-entity
+                entity: person.archana_maharjan
+                image: /local/archana.png
+                name: Archana M
+                aspect_ratio: 0%
+          - type: entity-filter
+            card:
+              title: Active Devices
+              type: entities
+            entities:
+              - entity: switch.2805375584f3eb78a549_2
+                state_color: true
+              - entity: switch.2805375584f3eb78a549_3
+                state_color: true
+              - entity: switch.2805375584f3eb78a549_1
+                state_color: true
+              - entity: switch.61308075ecfabc3082f8
+                state_color: true
+              - entity: light.master_bedroom_lamp
+              - entity: switch.lightstrip
+                state_color: true
+              - entity: switch.workstation
+                state_color: true
+              - entity: light.20363802d8bfc00c2851
+              - entity: switch.28053755bcddc2219b59_1
+                state_color: true
+              - entity: switch.28053755bcddc2219b59_2
+                state_color: true
+              - entity: switch.28053755bcddc2219b59_3
+                state_color: true
+              - entity: switch.613080753c71bf30c177
+                state_color: true
+              - entity: switch.613080753c71bf30c321
+                state_color: true
+              - entity: switch.61308075ecfabc308206
+                state_color: true
+              - entity: switch.61308075ecfabc3083f8
+                state_color: true
+              - entity: light.0378700684f3ebd05c9a
+              - entity: light.20363802d8bfc00c2df5
+              - entity: switch.1745257568c63aeea6d7_1
+                state_color: true
+              - entity: switch.1745257568c63aeea6d7_2
+                state_color: true
+              - entity: switch.17452575500291642e2b_1
+                state_color: true
+              - entity: switch.17452575500291642e2b_2
+                state_color: true
+              - entity: switch.7835046550029164312a
+                state_color: true
+              - entity: switch.washing_machine
+                state_color: true
+              - entity: switch.61308075ecfabc30872d
+                state_color: true
+              - entity: light.guest_bedroom_lamp
+              - entity: switch.61308075ecfabc2ffaa0
+                state_color: true
+              - entity: light.media_room_lamp
+              - entity: switch.av_receiver
+                state_color: true
+              - entity: switch.projector
+                state_color: true
+              - entity: switch.2805375584f3eb78abc5_1
+                state_color: true
+              - entity: switch.2805375584f3eb78abc5_2
+                state_color: true
+              - entity: light.kitchen_lightstrip
+              - entity: switch.dishwasher
+                state_color: true
+              - entity: switch.2805375584f3eb78abc5_3
+                state_color: true
+              - entity: switch.783504655002916432f4
+                state_color: true
+              - entity: switch.61308075ecfabc301587
+                state_color: true
+            show_empty: false
+            state_filter:
+              - 'on'
+          - type: entity-filter
+            card:
+              title: Motion Sensors
+              type: glance
+              columns: 3
+              show_state: false
+            entities:
+              - entity: binary_sensor.hallway_motion_sensor_motion
+                name: Hallway
+              - entity: binary_sensor.master_bedroom_motion_sensor_motion
+                name: Master Bedroom
+              - entity: binary_sensor.wardrobe_motion_sensor_motion
+                name: Wardrobe
+              - entity: binary_sensor.kids_bedroom_motion_sensor_motion
+                name: Kids Bedroom
+              - entity: binary_sensor.kids_bathroom_motion_sensor_motion
+                name: Kids Bathroom
+              - entity: binary_sensor.living_room_motion_sensor_motion
+                name: Living Room
+            show_empty: false
+            state_filter:
+              - 'on'
+          - type: entities
+            title: Sonos
+            entities:
+              - entity: media_player.master_bedroom
+              - entity: media_player.guest_bedroom
+              - entity: media_player.living_room
+            show_header_toggle: false
+          - type: entity-filter
+            card:
+              title: Chromecast
+              type: entities
+            entities:
+              - entity: media_player.media_room_cc
+              - entity: media_player.living_room_cc
+            show_empty: false
+            state_filter:
+              - playing
+              - paused
+          - type: entity-filter
+            card:
+              title: Google Speakers
+              type: entities
+            entities:
+              - entity: media_player.master_bedroom_gnh
+              - entity: media_player.bathroom_gnm
+              - entity: media_player.kids_bedroom_ghm
+              - entity: media_player.media_room_ghm
+              - entity: media_player.living_room_ghm
+            show_empty: false
+            state_filter:
+              - playing
+              - paused
+          - type: entities
+            title: Robot Vacuum
+            entities:
+              - entity: sensor.robot_vacuum_robot_cleaner_movement
+              - entity: scene.robot_vacuum_start
+              - entity: scene.robot_vacuum_stop
+            show_header_toggle: false
+        type: vertical-stack
+      - cards:
+          - type: picture-glance
+            title: Driveway
+            camera_image: camera.driveway_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: glance
+            title: Cameras
+            entities:
+              - entity: camera.driveway_camera
+                icon: 'mdi:cctv'
+                name: Driveway
+              - entity: camera.front_door_camera
+                icon: 'mdi:cctv'
+                name: Front Door
+              - entity: camera.garage_camera
+                icon: 'mdi:cctv'
+                name: Garage
+              - entity: camera.living_room_camera
+                icon: 'mdi:cctv'
+                name: Living Room
+              - entity: camera.kids_bedroom_camera
+                icon: 'mdi:cctv'
+                name: Kids Bedroom
+              - entity: camera.backyard_camera
+                icon: 'mdi:cctv'
+                name: Backyard
+            columns: 3
+            show_icon: true
+            show_state: false
+          - type: conditional
+            card:
+              type: picture-entity
+              entity: camera.garage_camera
+              camera_image: camera.garage_camera
+              camera_view: live
+              image: /local/wyze.png
+              aspect_ratio: 0%
+              show_state: false
+            conditions:
+              - entity: cover.garage_door
+                state_not: closed
+          - type: horizontal-stack
+            cards:
+              - type: picture-entity
+                entity: binary_sensor.ring_video_doorbell_motion
+                name: Front Door
+                image: /local/motion.png
+                aspect_ratio: 0%
+              - type: picture-entity
+                entity: cover.garage_door
+                name: Garage Door
+                image: /local/garage.png
+                aspect_ratio: 0%
+          - type: entities
+            title: Scenes
+            entities:
+              - entity: scene.night
+                name: Good Night
+              - entity: scene.blackout
+                name: Shut Down
+            show_header_toggle: false
+          - type: gauge
+            entity: sensor.pv_eday
+            max: 100
+            min: 0
+            severity:
+              green: 20
+              red: 0
+              yellow: 10
+          - type: horizontal-stack
+            cards:
+              - type: picture-entity
+                entity: sensor.waste_collection
+                image: /local/trash.png
+                tap_action:
+                  action: none
+                hold_action:
+                  action: none
+                aspect_ratio: 0%
+              - type: picture-entity
+                entity: sensor.google_wifi_status
+                image: /local/wifi.png
+                tap_action:
+                  action: none
+                hold_action:
+                  action: none
+                aspect_ratio: 0%
+        type: vertical-stack
+    icon: 'mdi:home'
+    panel: false
+    path: home
+    title: Home
+  - badges:
+      - entity: person.ashish_upadhayay
+        name: Ashish
+      - entity: person.archana_maharjan
+        name: Archana
+      - entity: cover.garage_door
+        name: Garage
+      - entity: sensor.google_wifi_status
+        name: WiFi
+    cards:
+      - cards:
+          - type: picture-glance
+            title: Driveway
+            camera_image: camera.driveway_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: entities
+            title: Porch
+            entities:
+              - entity: switch.2805375584f3eb78a549_2
+                name: Light
+                state_color: true
+              - entity: switch.2805375584f3eb78a549_3
+                name: Accent Light
+                state_color: true
+          - type: entities
+            title: Hallway
+            entities:
+              - entity: binary_sensor.hallway_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: switch.2805375584f3eb78a549_1
+                name: Light
+                state_color: true
+          - type: entities
+            title: Master Bedroom
+            entities:
+              - entity: binary_sensor.master_bedroom_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: switch.61308075ecfabc3082f8
+                name: Light
+                state_color: true
+              - entity: light.master_bedroom_lamp
+                name: Table Lamp
+              - entity: switch.lightstrip
+                name: Accent Light
+                state_color: true
+              - entity: switch.workstation
+                name: Workstation
+                state_color: true
+              - entity: light.20363802d8bfc00c2851
+                name: RGB Lightstrip
+          - type: entities
+            title: Bathroom
+            entities:
+              - entity: switch.28053755bcddc2219b59_1
+                name: Light
+                state_color: true
+              - entity: switch.28053755bcddc2219b59_2
+                name: Downlight
+                state_color: true
+              - entity: switch.28053755bcddc2219b59_3
+                name: Exhaust
+                state_color: true
+          - type: entities
+            title: Toilet
+            entities:
+              - entity: switch.613080753c71bf30c177
+                name: Light
+                state_color: true
+          - type: entities
+            title: Wardrobe
+            entities:
+              - entity: binary_sensor.wardrobe_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: switch.613080753c71bf30c321
+                name: Light
+                state_color: true
+          - type: picture-glance
+            title: Garage
+            camera_image: camera.garage_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: entities
+            title: Garage
+            entities:
+              - entity: switch.61308075ecfabc308206
+                name: Light
+                state_color: true
+          - type: picture-glance
+            title: Kids Bedroom
+            camera_image: camera.kids_bedroom_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: entities
+            title: Kids Bedroom
+            entities:
+              - entity: binary_sensor.kids_bedroom_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: sensor.kids_bedroom_button_temperature_measurement
+                name: Temperature
+              - entity: switch.61308075ecfabc3083f8
+                name: Light
+                state_color: true
+              - entity: light.0378700684f3ebd05c9a
+                name: Desk Lamp
+              - entity: light.20363802d8bfc00c2df5
+                name: RGB Lightstrip
+        type: vertical-stack
+      - cards:
+          - type: entities
+            title: Kids Bathroom
+            entities:
+              - entity: binary_sensor.kids_bathroom_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: switch.1745257568c63aeea6d7_1
+                name: Light
+                state_color: true
+              - entity: switch.1745257568c63aeea6d7_2
+                name: Downlight
+                state_color: true
+          - type: entities
+            title: Kids Toilet
+            entities:
+              - entity: switch.17452575500291642e2b_1
+                name: Light
+                state_color: true
+              - entity: switch.17452575500291642e2b_2
+                name: Exhaust
+                state_color: true
+          - type: entities
+            title: Laundry
+            entities:
+              - entity: switch.7835046550029164312a
+                name: Light
+                state_color: true
+              - entity: switch.washing_machine
+                name: Washing Machine
+                state_color: true
+          - type: entities
+            title: Guest Bedroom
+            entities:
+              - entity: switch.61308075ecfabc30872d
+                name: Light
+                state_color: true
+              - entity: light.guest_bedroom_lamp
+                name: Table Lamp
+          - type: entities
+            title: Media Room
+            entities:
+              - entity: switch.61308075ecfabc2ffaa0
+                name: Light
+                state_color: true
+              - entity: light.media_room_lamp
+                name: Floor Lamp
+              - entity: switch.av_receiver
+                name: AV Receiver
+                state_color: true
+              - entity: switch.projector
+                name: Projector
+                state_color: true
+          - type: picture-glance
+            title: Living Room
+            camera_image: camera.living_room_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: entities
+            title: Living Room
+            entities:
+              - entity: binary_sensor.living_room_motion_sensor_motion
+                name: Motion
+                state_color: true
+              - entity: switch.2805375584f3eb78abc5_1
+                name: Light
+                state_color: true
+          - type: entities
+            title: Kitchen
+            entities:
+              - entity: switch.2805375584f3eb78abc5_2
+                name: Light
+                state_color: true
+              - entity: light.kitchen_lightstrip
+                name: RGB Lightstrip
+              - entity: switch.dishwasher
+                name: Dishwasher
+                state_color: true
+          - type: entities
+            title: Dining
+            entities:
+              - entity: switch.2805375584f3eb78abc5_3
+                name: Light
+                state_color: true
+          - type: entities
+            title: Pantry
+            entities:
+              - entity: switch.783504655002916432f4
+                name: Light
+                state_color: true
+          - type: entities
+            title: Alfresco
+            entities:
+              - entity: switch.61308075ecfabc301587
+                name: Light
+                state_color: true
+          - type: picture-glance
+            title: Backyard
+            camera_image: camera.backyard_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+        type: vertical-stack
+    icon: ''
+    path: rooms
+    title: Rooms
+  - badges:
+      - entity: person.ashish_upadhayay
+        name: Ashish
+      - entity: person.archana_maharjan
+        name: Archana
+      - entity: cover.garage_door
+        name: Garage
+      - entity: sensor.google_wifi_status
+        name: WiFi
+    cards:
+      - cards:
+          - type: history-graph
+            title: Solar
+            entities:
+              - entity: sensor.pv_eday
+                name: Energy
+            hours_to_show: 120
+            refresh_interval: 0
+          - type: history-graph
+            title: Internet
+            entities:
+              - entity: sensor.speedtest_download
+                name: Download
+              - entity: sensor.speedtest_upload
+                name: Upload
+            hours_to_show: 120
+            refresh_interval: 60
+          - type: history-graph
+            title: NAS
+            entities:
+              - entity: sensor.ts453pro_cpu_usage
+                name: CPU
+              - entity: sensor.ts453pro_memory_usage
+                name: RAM
+              - entity: sensor.ts453pro_volume_used_datavol1
+                name: HDD
+            hours_to_show: 120
+            refresh_interval: 0
+        type: vertical-stack
+      - cards:
+          - type: entities
+            title: Battery
+            entities:
+              - entity: sensor.ring_video_doorbell_battery
+                name: Ring Video Doorbell
+                icon: mdi:doorbell-video
+              - entity: sensor.front_door_mp_sensor_battery
+                name: Front Door Multi Purpose Sensor
+                icon: mdi:signal-variant
+              - entity: sensor.hallway_motion_sensor_battery
+                name: Hallway Motion Sensor
+                icon: mdi:motion-sensor
+              - entity: sensor.master_bedroom_motion_sensor_battery
+                name: Master Bedroom Motion Sensor
+                icon: mdi:motion-sensor
+              - entity: sensor.wardrobe_motion_sensor_battery
+                name: Wardrobe Motion Sensor
+                icon: mdi:motion-sensor
+              - entity: sensor.kids_bedroom_motion_sensor_battery
+                name: Kids Bedroom Motion Sensor
+                icon: mdi:motion-sensor
+              - entity: sensor.kids_bedroom_button_battery
+                name: Kids Bedroom Button
+                icon: mdi:gesture-tap
+              - entity: sensor.kids_bathroom_motion_sensor_battery
+                name: Kids Bathroom Motion Sensor
+                icon: mdi:motion-sensor
+              - entity: sensor.living_room_motion_sensor_battery
+                name: Living Room Motion Sensor
+                icon: mdi:motion-sensor
+          - type: map
+            entities:
+              - entity: person.ashish_upadhayay
+              - entity: person.archana_maharjan
+            hours_to_show: 0
+            aspect_ratio: '4:3'
+        type: vertical-stack
+    icon: ''
+    path: system
+    title: System
