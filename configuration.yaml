@@ -89,6 +89,22 @@ garbage_collection:
     verbose_state: true
     verbose_format: '{days} days'
 
+# Device Tracker
+device_tracker:
+  - platform: ping
+    hosts:
+      ashish_pixel_3: 192.168.86.23
+      archana_pixel_3: 192.168.86.24
+
+# Binay Sensor
+binary_sensor:
+  - platform: ping
+    name: Ashish Pixel 3
+    host: 192.168.86.23
+  - platform: ping
+    name: Archana Pixel 3
+    host: 192.168.86.24
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
