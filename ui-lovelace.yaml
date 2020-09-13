@@ -36,6 +36,11 @@ views:
             card:
               title: Active Devices
               type: entities
+              style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.2805375584f3eb78a549_2
                 state_color: true
@@ -111,6 +116,11 @@ views:
               type: glance
               columns: 3
               show_state: false
+              style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.hallway_motion_sensor_motion
                 name: Hallway
@@ -129,6 +139,11 @@ views:
               - 'on'
           - type: entities
             title: Sonos
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: media_player.master_bedroom
               - entity: media_player.guest_bedroom
@@ -138,6 +153,11 @@ views:
             card:
               title: Chromecast
               type: entities
+              style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: media_player.media_room_cc
               - entity: media_player.living_room_cc
@@ -149,6 +169,11 @@ views:
             card:
               title: Google Speakers
               type: entities
+              style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: media_player.master_bedroom_gnh
               - entity: media_player.bathroom_gnm
@@ -161,6 +186,11 @@ views:
               - paused
           - type: entities
             title: Robot Vacuum
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: sensor.robot_vacuum_robot_cleaner_movement
               - entity: scene.robot_vacuum_start
@@ -177,6 +207,11 @@ views:
             aspect_ratio: 0%
           - type: glance
             title: Cameras
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: camera.driveway_camera
                 icon: 'mdi:cctv'
@@ -223,8 +258,15 @@ views:
                 name: Garage Door
                 image: /local/garage.png
                 aspect_ratio: 0%
+                tap_action:
+                  action: toggle
           - type: entities
             title: Scenes
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: scene.night
                 name: Good Night
@@ -249,6 +291,7 @@ views:
                 hold_action:
                   action: none
                 aspect_ratio: 0%
+                name: Bins
               - type: picture-entity
                 entity: sensor.google_wifi_status
                 image: /local/wifi.png
@@ -282,6 +325,11 @@ views:
             aspect_ratio: 0%
           - type: entities
             title: Porch
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.2805375584f3eb78a549_2
                 name: Light
@@ -291,6 +339,11 @@ views:
                 state_color: true
           - type: entities
             title: Hallway
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.hallway_motion_sensor_motion
                 name: Motion
@@ -300,6 +353,11 @@ views:
                 state_color: true
           - type: entities
             title: Master Bedroom
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.master_bedroom_motion_sensor_motion
                 name: Motion
@@ -319,6 +377,11 @@ views:
                 name: RGB Lightstrip
           - type: entities
             title: Bathroom
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.28053755bcddc2219b59_1
                 name: Light
@@ -331,12 +394,22 @@ views:
                 state_color: true
           - type: entities
             title: Toilet
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.613080753c71bf30c177
                 name: Light
                 state_color: true
           - type: entities
             title: Wardrobe
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.wardrobe_motion_sensor_motion
                 name: Motion
@@ -353,6 +426,11 @@ views:
             aspect_ratio: 0%
           - type: entities
             title: Garage
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.61308075ecfabc308206
                 name: Light
@@ -366,6 +444,11 @@ views:
             aspect_ratio: 0%
           - type: entities
             title: Kids Bedroom
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.kids_bedroom_motion_sensor_motion
                 name: Motion
@@ -383,6 +466,11 @@ views:
       - cards:
           - type: entities
             title: Kids Bathroom
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.kids_bathroom_motion_sensor_motion
                 name: Motion
@@ -395,6 +483,11 @@ views:
                 state_color: true
           - type: entities
             title: Kids Toilet
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.17452575500291642e2b_1
                 name: Light
@@ -404,6 +497,11 @@ views:
                 state_color: true
           - type: entities
             title: Laundry
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.7835046550029164312a
                 name: Light
@@ -413,6 +511,11 @@ views:
                 state_color: true
           - type: entities
             title: Guest Bedroom
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.61308075ecfabc30872d
                 name: Light
@@ -421,6 +524,11 @@ views:
                 name: Table Lamp
           - type: entities
             title: Media Room
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.61308075ecfabc2ffaa0
                 name: Light
@@ -442,6 +550,11 @@ views:
             aspect_ratio: 0%
           - type: entities
             title: Living Room
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: binary_sensor.living_room_motion_sensor_motion
                 name: Motion
@@ -451,6 +564,11 @@ views:
                 state_color: true
           - type: entities
             title: Kitchen
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.2805375584f3eb78abc5_2
                 name: Light
@@ -462,18 +580,33 @@ views:
                 state_color: true
           - type: entities
             title: Dining
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.2805375584f3eb78abc5_3
                 name: Light
                 state_color: true
           - type: entities
             title: Pantry
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.783504655002916432f4
                 name: Light
                 state_color: true
           - type: entities
             title: Alfresco
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: switch.61308075ecfabc301587
                 name: Light
@@ -502,6 +635,11 @@ views:
       - cards:
           - type: history-graph
             title: Solar
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: sensor.pv_eday
                 name: Energy
@@ -509,6 +647,11 @@ views:
             refresh_interval: 0
           - type: history-graph
             title: Internet
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: sensor.speedtest_download
                 name: Download
@@ -518,6 +661,11 @@ views:
             refresh_interval: 60
           - type: history-graph
             title: NAS
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: sensor.ts453pro_cpu_usage
                 name: CPU
@@ -531,6 +679,11 @@ views:
       - cards:
           - type: entities
             title: Battery
+            style: |
+                .card-header {
+                  font-weight: 500;
+                  font-size: 16px;
+                }
             entities:
               - entity: sensor.ring_video_doorbell_battery
                 name: Ring Video Doorbell
@@ -559,12 +712,6 @@ views:
               - entity: sensor.living_room_motion_sensor_battery
                 name: Living Room Motion Sensor
                 icon: mdi:motion-sensor
-          - type: map
-            entities:
-              - entity: person.ashish_upadhayay
-              - entity: person.archana_maharjan
-            hours_to_show: 0
-            aspect_ratio: '4:3'
         type: vertical-stack
     icon: ''
     path: system
