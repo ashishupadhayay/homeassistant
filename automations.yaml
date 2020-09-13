@@ -1,14 +1,12 @@
 - id: away
   alias: Trigger - Away
   trigger:
-    - platform: zone
-      event: leave
-      zone: zone.home
+    - platform: state
       entity_id: person.ashish_upadhayay
-    - platform: zone
-      event: leave
-      zone: zone.home
+      to: not_home
+    - platform: state
       entity_id: person.archana_maharjan
+      to: not_home
   condition:
     - condition: state
       entity_id: person.ashish_upadhayay
@@ -31,14 +29,12 @@
 - id: home
   alias: Trigger - Home
   trigger:
-    - platform: zone
-      event: enter
-      zone: zone.home
+    - platform: state
       entity_id: person.ashish_upadhayay
-    - platform: zone
-      event: enter
-      zone: zone.home
+      to: home
+    - platform: state
       entity_id: person.archana_maharjan
+      to: home
   action:
     service: switch.turn_off
     data:
