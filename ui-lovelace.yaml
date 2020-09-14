@@ -348,6 +348,8 @@ views:
               - entity: binary_sensor.hallway_motion_sensor_motion
                 name: Motion
                 state_color: true
+              - entity: sensor.front_door_mp_sensor_temperature_measurement
+                name: Temperature
               - entity: switch.2805375584f3eb78a549_1
                 name: Light
                 state_color: true
