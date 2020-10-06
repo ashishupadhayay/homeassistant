@@ -135,6 +135,24 @@ sensor.front_door_mp_sensor_temperature_measurement:
 sensor.front_door_mp_sensor_battery:
   friendly_name: Front Door Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
+binary_sensor.master_bedroom_mp_sensor_contact:
+  friendly_name: Master Bedroom Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.master_bedroom_mp_sensor_temperature_measurement:
+  friendly_name: Master Bedroom Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.master_bedroom_mp_sensor_battery:
+  friendly_name: Master Bedroom Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.kids_bedroom_mp_sensor_contact:
+  friendly_name: Kids Bedroom Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.kids_bedroom_mp_sensor_temperature_measurement:
+  friendly_name: Kids Bedroom Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.kids_bedroom_mp_sensor_battery:
+  friendly_name: Kids Bedroom Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
 sensor.kids_bedroom_button_temperature_measurement:
   friendly_name: Kids Bedroom Button Temperature
   icon: mdi:thermometer
@@ -206,7 +224,7 @@ sensor.living_room_motion_sensor_battery:
   friendly_name: Living Room Motion Sensor Battery
   icon: mdi:battery-heart-variant
 
-# Google Nest WiFi
+# Google
 sensor.google_wifi_status:
   friendly_name: WiFi
   icon: mdi:wifi
@@ -216,7 +234,33 @@ sensor.google_wifi_uptime:
 sensor.google_wifi_local_ip:
   friendly_name: Local IP
   icon: mdi:ip-network
+media_player.master_bedroom_gnh:
+  friendly_name: Master Bedroom GNH
+  icon: mdi:google-home
+media_player.bathroom_gnm:
+  friendly_name: Bathroom GNM
+  icon: mdi:google-home
+media_player.kids_bedroom_ghm:
+  friendly_name: Kids Bedroom GHM
+  icon: mdi:google-home
+media_player.media_room_ghm:
+  friendly_name: Media Room GHM
+  icon: mdi:google-home
+media_player.living_room_ghm:
+  friendly_name: Living Room GHM
+  icon: mdi:google-home
 
+# SONOS
+media_player.master_bedroom:
+  friendly_name: 'Play:5'
+  icon: mdi:speaker
+media_player.guest_bedroom:
+  friendly_name: 'Play:1'
+  icon: mdi:speaker
+media_player.living_room:
+  friendly_name: 'Play:3'
+  icon: mdi:speaker
+  
 # SEMS Portal
 sensor.pv_outputpower:
   friendly_name: Power Output

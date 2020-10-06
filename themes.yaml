@@ -16,6 +16,7 @@
   paper-item-icon-color: "#ffffff"
   paper-item-icon-active-color: "#FFEB3B"
 
+  ha-card-header-font-size: 16px
   ha-card-background: "rgba(0, 0, 0, 0.3)"
   ha-card-border-radius: 0px
 
