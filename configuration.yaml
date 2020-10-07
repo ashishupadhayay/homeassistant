@@ -53,6 +53,10 @@ sensor:
     password: !secret sems_password
     station_id : !secret sems_station_id
     scan_interval: 60
+  - platform: fitbit
+    clock_format: 12H
+    monitored_resources:
+      - 'activities/steps'
   - platform: template
     sensors:
       pv_outputpower:
