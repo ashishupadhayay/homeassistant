@@ -102,7 +102,7 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
       value: pushed
   action:
     service: scene.turn_on
@@ -116,7 +116,7 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
       value: double
   action:
     service: scene.turn_on
@@ -130,7 +130,7 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: 040a52cd-0e91-4a8c-ad66-4fc190eacf58
+      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
       value: held
   action:
     - service: media_player.play_media
