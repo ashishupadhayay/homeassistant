@@ -309,6 +309,9 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+          - type: thermostat
+            title: Master Bedroom
+            entity: climate.master_bedroom
           - type: picture-glance
             title: Driveway
             camera_image: camera.driveway_camera

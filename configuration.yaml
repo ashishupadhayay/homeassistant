@@ -6,6 +6,9 @@ default_config:
 tts:
   - platform: google_translate
 
+http:
+  base_url: !secret external_url
+   
 # Theme
 frontend:
   themes: !include themes.yaml
@@ -53,10 +56,6 @@ sensor:
     password: !secret sems_password
     station_id : !secret sems_station_id
     scan_interval: 60
-  - platform: fitbit
-    clock_format: 12H
-    monitored_resources:
-      - 'activities/steps'
   - platform: template
     sensors:
       pv_outputpower:
@@ -108,6 +107,12 @@ binary_sensor:
   - platform: ping
     name: Archana Pixel 3
     host: 192.168.86.24
+
+# Dyson
+dyson:
+  username: !secret dyson_username
+  password: !secret dyson_password
+  language: AU
 
 group: !include groups.yaml
 automation: !include automations.yaml
