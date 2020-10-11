@@ -5,9 +5,6 @@ default_config:
 # Text to speech
 tts:
   - platform: google_translate
-
-http:
-  base_url: !secret external_url
    
 # Theme
 frontend:
@@ -96,8 +93,8 @@ garbage_collection:
 device_tracker:
   - platform: ping
     hosts:
-      ashish_pixel_3: 192.168.86.23
-      archana_pixel_3: 192.168.86.24
+      ashish_pixel_3: 192.168.86.46
+      archana_pixel_3: 192.168.86.47
 
 # Binay Sensor
 binary_sensor:
