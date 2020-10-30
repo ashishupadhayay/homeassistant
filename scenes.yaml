@@ -102,14 +102,12 @@
 - id: kids-bedroom-on
   name: Kids Bedroom ON
   entities:
-    light.0378700684f3ebd05c9a: on
     light.20363802d8bfc00c2df5: on
   icon: mdi:lightbulb-on
 
 - id: kids-bedroom-off
   name: Kids Bedroom OFF
   entities:
-    light.0378700684f3ebd05c9a: off
     light.20363802d8bfc00c2df5: off
   icon: mdi:lightbulb-off
 

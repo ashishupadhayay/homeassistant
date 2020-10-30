@@ -48,10 +48,14 @@
     platform: sun
     event: sunrise
   action:
-    service: switch.turn_on
-    data:
-      entity_id:
-        - switch.dishwasher
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.dishwasher
+    - service: cover.open_cover
+      data:
+        entity_id:
+          - cover.51681463d8bfc0dc7869
   mode: single
 
 - id: sunset
@@ -60,11 +64,15 @@
     platform: sun
     event: sunset
   action:
-    service: switch.turn_on
-    data:
-      entity_id:
-        - switch.2805375584f3eb78a549_3
-        - switch.2805375584f3eb78a549_1
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.2805375584f3eb78a549_3
+          - switch.2805375584f3eb78a549_1
+    - service: cover.close_cover
+      data:
+        entity_id:
+          - cover.51681463d8bfc0dc7869
   mode: single
 
 - id: bedtime-notification
@@ -133,16 +141,10 @@
       device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
       value: held
   action:
-    - service: media_player.play_media
+    - service: cover.toggle
       data:
-        entity_id: media_player.bedroom_speakers
-        media_content_id: http://192.168.86.4:8123/local/notification.mp3
-        media_content_type: music
-    - delay: '3'
-    - service: tts.google_translate_say
-      data:
-        entity_id: media_player.bedroom_speakers
-        message: Ava needs some help.
+        entity_id:
+          - cover.51681463d8bfc0dc7869
   mode: single
 
 - id: front-door-open
@@ -351,4 +353,20 @@
       entity_id:
         - switch.2805375584f3eb78abc5_1
         - switch.2805375584f3eb78abc5_2
+  mode: single
+
+- id: master-bedroom-door-close
+  alias: Trigger - Master Bedroom Door CLOSE
+  trigger:
+    platform: state
+    entity_id: binary_sensor.master_bedroom_mp_sensor_contact
+    to: 'off'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.night
   mode: single

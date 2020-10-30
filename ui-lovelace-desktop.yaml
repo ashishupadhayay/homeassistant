@@ -92,6 +92,7 @@ views:
               - entity: switch.workstation
                 state_color: true
               - entity: light.20363802d8bfc00c2851
+              - entity: fan.master_bedroom
               - entity: switch.28053755bcddc2219b59_1
                 state_color: true
               - entity: switch.28053755bcddc2219b59_2
@@ -591,6 +592,12 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
+              - entity: fan.master_bedroom
+                name: Fan
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
             show_name: true
             show_state: false
             columns: 3
@@ -740,6 +747,12 @@ views:
                 icon: 'mdi:cctv'
                 tap_action:
                   action: more-info
+                hold_action:
+                  action: none
+              - entity: cover.51681463d8bfc0dc7869
+                name: Blinds
+                tap_action:
+                  action: toggle
                 hold_action:
                   action: none
             show_name: true

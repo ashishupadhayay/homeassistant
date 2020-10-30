@@ -88,6 +88,11 @@ light.0378700684f3ebd05c9a:
   friendly_name: Kids Bedroom Desk Lamp
   icon: mdi:desk-lamp
 
+# Tuya Blinds
+cover.51681463d8bfc0dc7869:
+  friendly_name: Kids Bedroom Blinds
+  icon: mdi:blinds
+
 # Hue
 light.master_bedroom_lamp:
   friendly_name: Master Bedroom Table Lamp
@@ -165,18 +170,12 @@ sensor.robot_vacuum_robot_cleaner_movement:
 sensor.robot_vacuum_robot_cleaner_turbo_mode:
   friendly_name: Turbo Mode
   icon: mdi:run-fast
-scene.robot_vacuum_start:
+scene.cleanup:
   friendly_name: Cleanup
   icon: mdi:broom
-scene.robot_vacuum_stop:
-  friendly_name: Recharge
-  icon: mdi:stop-circle
 switch.tv_samsung_6_series_60:
   friendly_name: Living Room TV
   icon: mdi:television-classic
-switch.armed:
-  friendly_name: Armed
-  icon: mdi:lock
 
 # Ring
 binary_sensor.ring_video_doorbell_motion:
@@ -271,6 +270,11 @@ sensor.pv_iday:
 sensor.pv_itotal:
   friendly_name: Total Income
   icon: mdi:trophy
+
+# Dyson
+fan.master_bedroom:
+  friendly_name: Master Bedroom Fan
+  icon: mdi:air-conditioner
 
 # Ashish Pixel 3
 device_tracker.ashish_pixel_3:
