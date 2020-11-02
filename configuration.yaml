@@ -80,15 +80,6 @@ sensor:
         unit_of_measurement: '$'
         friendly_name: 'Income (Total)'
 
-# Garbage Collection
-garbage_collection:
-  sensors:
-  - name: Waste Collection
-    frequency: 'weekly'
-    collection_days: wed
-    verbose_state: true
-    verbose_format: '{days} days'
-
 # Device Tracker
 device_tracker:
   - platform: ping
@@ -100,16 +91,28 @@ device_tracker:
 binary_sensor:
   - platform: ping
     name: Ashish Pixel 3
-    host: 192.168.86.23
+    host: 192.168.86.46
   - platform: ping
     name: Archana Pixel 3
-    host: 192.168.86.24
+    host: 192.168.86.47
 
 # Dyson
 dyson:
   username: !secret dyson_username
   password: !secret dyson_password
   language: AU
+
+# NESS
+ness_alarm:
+  host: 192.168.86.10
+  port: 2401
+  zones:
+    - name: Master Bedroom
+      id: 1
+    - name: Front Door
+      id: 2
+    - name: Back Door
+      id: 3
 
 group: !include groups.yaml
 automation: !include automations.yaml
