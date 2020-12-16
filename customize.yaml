@@ -83,11 +83,6 @@ light.20363802d8bfc00c2df5:
   friendly_name: Kids Bedroom RGB Lightstrip
   icon: mdi:led-strip-variant
 
-# Tuya Light
-light.0378700684f3ebd05c9a:
-  friendly_name: Kids Bedroom Desk Lamp
-  icon: mdi:desk-lamp
-
 # Tuya Blinds
 cover.51681463d8bfc0dc7869:
   friendly_name: Kids Bedroom Blinds
@@ -114,6 +109,12 @@ cover.garage_door:
 switch.washing_machine:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
+switch.kids_bedroom_fan:
+  friendly_name: Kids Bedroom Fan
+  icon: mdi:fan
+switch.guest_bedroom_fan:
+  friendly_name: Master Bedroom Accent Light
+  icon: mdi:track-light
 switch.av_receiver:
   friendly_name: AV Receiver
   icon: mdi:amplifier
@@ -123,12 +124,6 @@ switch.projector:
 switch.dishwasher:
   friendly_name: Dishwasher
   icon: mdi:dishwasher
-switch.workstation:
-  friendly_name: Workstation
-  icon: mdi:desktop-classic
-switch.lightstrip:
-  friendly_name: Master Bedroom Accent Light
-  icon: mdi:track-light
 
 # Samsung/Smartthings
 binary_sensor.front_door_mp_sensor_contact:
@@ -236,17 +231,14 @@ sensor.google_wifi_local_ip:
 media_player.master_bedroom_gnh:
   friendly_name: Master Bedroom GNH
   icon: mdi:google-home
-media_player.bathroom_gnm:
-  friendly_name: Bathroom GNM
-  icon: mdi:google-home
 media_player.kids_bedroom_ghm:
   friendly_name: Kids Bedroom GHM
   icon: mdi:google-home
 media_player.media_room_ghm:
   friendly_name: Media Room GHM
   icon: mdi:google-home
-media_player.living_room_ghm:
-  friendly_name: Living Room GHM
+media_player.living_room_gnm:
+  friendly_name: Living Room GNM
   icon: mdi:google-home
 
 # SONOS
@@ -280,14 +272,8 @@ fan.master_bedroom:
 device_tracker.ashish_pixel_3:
   friendly_name: Ashish Pixel 3
   icon: mdi:cellphone-android
-sensor.ashish_pixel_3_battery_level:
-  friendly_name: Ashish Pixel 3 Battery Level
-  icon: mdi:battery-heart-variant
 
 # Archana Pixel 3
 device_tracker.archana_pixel_3:
   friendly_name: Archana Pixel 3
   icon: mdi:cellphone-android
-sensor.archana_pixel_3_battery_level:
-  friendly_name: Archana Pixel 3 Battery Level
-  icon: mdi:battery-heart-variant

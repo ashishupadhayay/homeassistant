@@ -5,11 +5,11 @@ default_config:
 # Text to speech
 tts:
   - platform: google_translate
-   
+ 
 # Theme
 frontend:
   themes: !include themes.yaml
-
+  
 # Camera
 camera:
   - platform: generic
@@ -17,25 +17,25 @@ camera:
     still_image_url: /local/wyze.png
     stream_source: !secret driveway_camera
   - platform: generic
-    name: Front Door Camera
-    still_image_url: /local/wyze.png
-    stream_source: !secret front_door_camera
-  - platform: generic
     name: Garage Camera
     still_image_url: /local/wyze.png
     stream_source: !secret garage_camera
   - platform: generic
-    name: Living Room Camera
+    name: Master Bedroom Camera
     still_image_url: /local/wyze.png
-    stream_source: !secret living_room_camera
+    stream_source: !secret master_bedroom_camera
   - platform: generic
     name: Kids Bedroom Camera
     still_image_url: /local/wyze.png
     stream_source: !secret kids_bedroom_camera
   - platform: generic
-    name: Backyard Camera
+    name: Media Room Camera
     still_image_url: /local/wyze.png
-    stream_source: !secret backyard_camera
+    stream_source: !secret media_room_camera
+  - platform: generic
+    name: Living Room Camera
+    still_image_url: /local/wyze.png
+    stream_source: !secret living_room_camera
 
 # Sensor
 sensor:
@@ -84,8 +84,8 @@ sensor:
 device_tracker:
   - platform: ping
     hosts:
-      ashish_pixel_3: 192.168.86.46
-      archana_pixel_3: 192.168.86.47
+      ashish_pixel_3: 192.168.86.79
+      archana_pixel_3: 192.168.86.80
 
 # Binay Sensor
 binary_sensor:

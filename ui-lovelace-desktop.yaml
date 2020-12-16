@@ -7,53 +7,6 @@ views:
         name: Archana
     cards:
       - cards:
-          - type: entity-filter
-            card:
-              type: glance
-              columns: 2
-              show_state: true
-              style: |
-                ha-card {
-                  background: rgba(255, 0, 0, 0.6);
-                }
-            entities:
-              - entity: sensor.ring_video_doorbell_battery
-                name: Ring Video Doorbell
-                icon: mdi:doorbell-video
-              - entity: sensor.front_door_mp_sensor_battery
-                name: Front Door Multi Purpose Sensor
-                icon: mdi:signal-variant
-              - entity: sensor.hallway_motion_sensor_battery
-                name: Hallway Motion Sensor
-                icon: mdi:motion-sensor
-              - entity: sensor.master_bedroom_motion_sensor_battery
-                name: Master Bedroom Motion Sensor
-                icon: mdi:motion-sensor
-              - entity: sensor.master_bedroom_mp_sensor_battery
-                name: Master Bedroom Multi Purpose Sensor
-                icon: mdi:signal-variant
-              - entity: sensor.wardrobe_motion_sensor_battery
-                name: Wardrobe Motion Sensor
-                icon: mdi:motion-sensor
-              - entity: sensor.kids_bedroom_motion_sensor_battery
-                name: Kids Bedroom Motion Sensor
-                icon: mdi:motion-sensor
-              - entity: sensor.kids_bedroom_mp_sensor_battery
-                name: Kids Bedroom Multi Purpose Sensor
-                icon: mdi:signal-variant
-              - entity: sensor.kids_bedroom_button_battery
-                name: Kids Bedroom Button
-                icon: mdi:gesture-tap
-              - entity: sensor.kids_bathroom_motion_sensor_battery
-                name: Kids Bathroom Motion Sensor
-                icon: mdi:motion-sensor
-              - entity: sensor.living_room_motion_sensor_battery
-                name: Living Room Motion Sensor
-                icon: mdi:motion-sensor
-            show_empty: false
-            state_filter:
-              - operator: '<'
-                value: 20
           - type: weather-forecast
             entity: weather.67nav
             secondary_info_attribute: humidity
@@ -87,10 +40,6 @@ views:
               - entity: switch.61308075ecfabc3082f8
                 state_color: true
               - entity: light.master_bedroom_lamp
-              - entity: switch.lightstrip
-                state_color: true
-              - entity: switch.workstation
-                state_color: true
               - entity: light.20363802d8bfc00c2851
               - entity: fan.master_bedroom
               - entity: switch.28053755bcddc2219b59_1
@@ -107,8 +56,8 @@ views:
                 state_color: true
               - entity: switch.61308075ecfabc3083f8
                 state_color: true
-              - entity: light.0378700684f3ebd05c9a
               - entity: light.20363802d8bfc00c2df5
+              - entity: switch.kids_bedroom_fan
               - entity: switch.1745257568c63aeea6d7_1
                 state_color: true
               - entity: switch.1745257568c63aeea6d7_2
@@ -124,6 +73,7 @@ views:
               - entity: switch.61308075ecfabc30872d
                 state_color: true
               - entity: light.guest_bedroom_lamp
+              - entity: switch.guest_bedroom_fan
               - entity: switch.61308075ecfabc2ffaa0
                 state_color: true
               - entity: light.media_room_lamp
@@ -161,6 +111,9 @@ views:
             card:
               type: media-control
               entity: media_player.living_room_cc
+          - type: thermostat
+            name: Master Bedroom
+            entity: climate.master_bedroom
           - type: horizontal-stack
             cards:
               - type: button
@@ -310,9 +263,105 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-          - type: thermostat
-            name: Master Bedroom
-            entity: climate.master_bedroom
+          - type: alarm-panel
+            entity: alarm_control_panel.alarm_panel
+            name: NESS Alarm
+            states:
+              - arm_away
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.front_door
+                icon_height: 32px
+                name: Front Door
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.front_door', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: binary_sensor.master_bedroom
+                icon_height: 32px
+                name: Master Bedroom
+                show_state: false
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.master_bedroom', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: binary_sensor.back_door
+                icon_height: 32px
+                name: Back Door
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.back_door', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: binary_sensor.bathroom_wl_sensor_water
+                icon_height: 32px
+                name: Bathroom
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.bathroom_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: binary_sensor.kids_bathroom_wl_sensor_water
+                icon_height: 32px
+                name: Kids Bathroom
+                show_state: false
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.kids_bathroom_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: binary_sensor.kitchen_wl_sensor_water
+                icon_height: 32px
+                name: Kitchen
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.kitchen_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
           - type: picture-glance
             title: Driveway
             camera_image: camera.driveway_camera
