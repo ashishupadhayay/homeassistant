@@ -1,4 +1,3 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -84,17 +83,17 @@ sensor:
 device_tracker:
   - platform: ping
     hosts:
-      ashish_pixel_3: 192.168.86.79
-      archana_pixel_3: 192.168.86.80
+      - ashish_pixel_3: 192.168.86.79
+      - archana_pixel_3: 192.168.86.80
 
 # Binay Sensor
 binary_sensor:
   - platform: ping
     name: Ashish Pixel 3
-    host: 192.168.86.46
+    host: 192.168.86.79
   - platform: ping
     name: Archana Pixel 3
-    host: 192.168.86.47
+    host: 192.168.86.80
 
 # Dyson
 dyson:
@@ -107,11 +106,11 @@ ness_alarm:
   host: 192.168.86.10
   port: 2401
   zones:
-    - name: Master Bedroom
+    - name: Master Bedroom (Zone 1)
       id: 1
-    - name: Front Door
+    - name: Front Door (Zone 2)
       id: 2
-    - name: Back Door
+    - name: Back Door (Zone 3)
       id: 3
 
 group: !include groups.yaml

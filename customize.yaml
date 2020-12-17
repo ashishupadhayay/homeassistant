@@ -82,7 +82,7 @@ light.20363802d8bfc00c2851:
 light.20363802d8bfc00c2df5:
   friendly_name: Kids Bedroom RGB Lightstrip
   icon: mdi:led-strip-variant
-
+  
 # Tuya Blinds
 cover.51681463d8bfc0dc7869:
   friendly_name: Kids Bedroom Blinds
@@ -106,15 +106,15 @@ light.kitchen_lightstrip:
 cover.garage_door:
   friendly_name: Garage Door
   icon: mdi:garage
-switch.washing_machine:
-  friendly_name: Washing Machine
-  icon: mdi:washing-machine
 switch.kids_bedroom_fan:
   friendly_name: Kids Bedroom Fan
   icon: mdi:fan
+switch.washing_machine:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
 switch.guest_bedroom_fan:
-  friendly_name: Master Bedroom Accent Light
-  icon: mdi:track-light
+  friendly_name: Guest Bedroom Fan
+  icon: mdi:fan
 switch.av_receiver:
   friendly_name: AV Receiver
   icon: mdi:amplifier
@@ -144,6 +144,15 @@ sensor.master_bedroom_mp_sensor_temperature_measurement:
 sensor.master_bedroom_mp_sensor_battery:
   friendly_name: Master Bedroom Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
+binary_sensor.garage_mp_sensor_contact:
+  friendly_name: Garage Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.garage_mp_sensor_temperature_measurement:
+  friendly_name: Garage Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.garage_mp_sensor_battery:
+  friendly_name: Garage Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
 binary_sensor.kids_bedroom_mp_sensor_contact:
   friendly_name: Kids Bedroom Multi Purpose Sensor Contact
   icon: mdi:door
@@ -153,12 +162,60 @@ sensor.kids_bedroom_mp_sensor_temperature_measurement:
 sensor.kids_bedroom_mp_sensor_battery:
   friendly_name: Kids Bedroom Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
+binary_sensor.guest_bedroom_mp_sensor_contact:
+  friendly_name: Guest Bedroom Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.guest_bedroom_mp_sensor_temperature_measurement:
+  friendly_name: Guest Bedroom Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.guest_bedroom_mp_sensor_battery:
+  friendly_name: Guest Bedroom Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.media_room_mp_sensor_contact:
+  friendly_name: Media Room Multi Purpose Sensor Contact
+  icon: mdi:door
+sensor.media_room_mp_sensor_temperature_measurement:
+  friendly_name: Media Room Multi Purpose Sensor Temperature
+  icon: mdi:thermometer
+sensor.media_room_mp_sensor_battery:
+  friendly_name: Media Room Multi Purpose Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.bathroom_wl_sensor_water:
+  friendly_name: Bathroom Water Leak Sensor Status
+  icon: mdi:pipe-leak
+sensor.bathroom_wl_sensor_temperature_measurement:
+  friendly_name: Bathroom Water Leak Sensor Temperature
+  icon: mdi:thermometer
+sensor.bathroom_wl_sensor_battery:
+  friendly_name: Bathroom Water Leak Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.kids_bathroom_wl_sensor_water:
+  friendly_name: Kids Bathroom Water Leak Sensor Status
+  icon: mdi:pipe-leak
+sensor.kids_bathroom_wl_sensor_temperature_measurement:
+  friendly_name: Kids Bathroom Water Leak Sensor Temperature
+  icon: mdi:thermometer
+sensor.kids_bathroom_wl_sensor_battery:
+  friendly_name: Kids Bathroom Water Leak Sensor Battery
+  icon: mdi:battery-heart-variant
+binary_sensor.kitchen_wl_sensor_water:
+  friendly_name: Kitchen Water Leak Sensor Status
+  icon: mdi:pipe-leak
+sensor.kitchen_wl_sensor_temperature_measurement:
+  friendly_name: Kitchen Water Leak Sensor Temperature
+  icon: mdi:thermometer
+sensor.kitchen_wl_sensor_battery:
+  friendly_name: Kitchen Water Leak Sensor Battery
+  icon: mdi:battery-heart-variant
 sensor.kids_bedroom_button_temperature_measurement:
   friendly_name: Kids Bedroom Button Temperature
   icon: mdi:thermometer
 sensor.kids_bedroom_button_battery:
   friendly_name: Kids Bedroom Button Battery
   icon: mdi:battery-heart-variant
+switch.tv_samsung_6_series_60:
+  friendly_name: Living Room TV
+  icon: mdi:television-classic
 sensor.robot_vacuum_robot_cleaner_movement:
   friendly_name: Status
   icon: mdi:information
@@ -168,9 +225,6 @@ sensor.robot_vacuum_robot_cleaner_turbo_mode:
 scene.cleanup:
   friendly_name: Cleanup
   icon: mdi:broom
-switch.tv_samsung_6_series_60:
-  friendly_name: Living Room TV
-  icon: mdi:television-classic
 
 # Ring
 binary_sensor.ring_video_doorbell_motion:
@@ -218,6 +272,17 @@ sensor.living_room_motion_sensor_battery:
   friendly_name: Living Room Motion Sensor Battery
   icon: mdi:battery-heart-variant
 
+# NESS
+binary_sensor.master_bedroom_zone_1:
+  friendly_name: Master Bedroom
+  icon: mdi:motion-sensor
+binary_sensor.front_door_zone_2:
+  friendly_name: Front Door
+  icon: mdi:motion-sensor
+binary_sensor.back_door_zone_3:
+  friendly_name: Back Door
+  icon: mdi:motion-sensor
+
 # Google
 sensor.google_wifi_status:
   friendly_name: WiFi
@@ -251,28 +316,27 @@ media_player.guest_bedroom:
 media_player.living_room:
   friendly_name: 'Play:3'
   icon: mdi:speaker
-  
+
 # SEMS Portal
-sensor.pv_outputpower:
-  friendly_name: Power Output
-  icon: mdi:solar-power
-sensor.pv_iday:
-  friendly_name: Today's Income
-  icon: mdi:piggy-bank
-sensor.pv_itotal:
-  friendly_name: Total Income
-  icon: mdi:trophy
+sensor.pv_eday:
+  friendly_name: Solar
+  icon: mdi:white-balance-sunny
 
 # Dyson
 fan.master_bedroom:
   friendly_name: Master Bedroom Fan
   icon: mdi:air-conditioner
 
+# Speedtest
+sensor.speedtest_download:
+  friendly_name: Internet
+  icon: mdi:web
+
 # Ashish Pixel 3
 device_tracker.ashish_pixel_3:
   friendly_name: Ashish Pixel 3
   icon: mdi:cellphone-android
-
+  
 # Archana Pixel 3
 device_tracker.archana_pixel_3:
   friendly_name: Archana Pixel 3
