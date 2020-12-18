@@ -81,10 +81,19 @@ sensor:
 
 # Device Tracker
 device_tracker:
-  - platform: nmap_tracker
+  - platform: ping
     hosts:
       - ashish_pixel_3: 192.168.86.79
       - archana_pixel_3: 192.168.86.80
+
+# Binay Sensor
+binary_sensor:
+  - platform: ping
+    name: Ashish Pixel 3
+    host: 192.168.86.79
+  - platform: ping
+    name: Archana Pixel 3
+    host: 192.168.86.80
 
 # Dyson
 dyson:
