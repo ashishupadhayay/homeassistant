@@ -57,13 +57,6 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-          - type: picture-glance
-            title: Driveway
-            camera_image: camera.driveway_camera
-            camera_view: live
-            entities: []
-            image: /local/wyze.png
-            aspect_ratio: 0%
           - type: entity-filter
             card:
               title: Active Devices
@@ -147,41 +140,107 @@ views:
             show_empty: false
             state_filter:
               - 'on'
-          - type: conditional
-            conditions:
-              - entity: media_player.master_bedroom
-                state: playing
-            card:
-              type: media-control
-              entity: media_player.master_bedroom
-          - type: conditional
-            conditions:
-              - entity: media_player.guest_bedroom
-                state: playing
-            card:
-              type: media-control
-              entity: media_player.guest_bedroom
-          - type: conditional
-            conditions:
-              - entity: media_player.living_room
-                state: playing
-            card:
-              type: media-control
-              entity: media_player.living_room
-          - type: conditional
-            conditions:
-              - entity: media_player.media_room_cc
-                state_not: off
-            card:
-              type: media-control
-              entity: media_player.media_room_cc
-          - type: conditional
-            conditions:
-              - entity: media_player.living_room_cc
-                state_not: off
-            card:
-              type: media-control
-              entity: media_player.living_room_cc
+          - type: picture-glance
+            title: Driveway
+            camera_image: camera.driveway_camera
+            camera_view: live
+            entities: []
+            image: /local/wyze.png
+            aspect_ratio: 0%
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: camera.driveway_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Driveway
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: camera.master_bedroom_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Master Bedroom
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: camera.garage_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Garage
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: camera.kids_bedroom_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Kids Bedroom
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: camera.media_room_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Media Room
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: camera.living_room_camera
+                icon: 'mdi:cctv'
+                icon_height: 32px
+                name: Living Room
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
         type: vertical-stack
       - cards:
           - type: alarm-panel
@@ -243,17 +302,6 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-          - type: sensor
-            entity: sensor.pv_eday
-            graph: line
-            style: |
-              .name {
-                font-size: 14px !important;
-                font-weight: normal !important;
-              }
-              .icon {
-                color: #ffffff !important;
-              }
           - type: horizontal-stack
             cards:
               - type: button
@@ -354,157 +402,14 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-          - type: horizontal-stack
-            cards:
-              - type: button
-                entity: camera.driveway_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Driveway
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: camera.master_bedroom_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Master Bedroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: camera.garage_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Garage
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-          - type: horizontal-stack
-            cards:
-              - type: button
-                entity: camera.kids_bedroom_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Kids Bedroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: camera.media_room_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Media Room
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: camera.living_room_camera
-                icon: 'mdi:cctv'
-                icon_height: 32px
-                name: Living Room
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-        type: vertical-stack
-      - cards:
-          - type: thermostat
-            name: Master Bedroom
-            entity: climate.master_bedroom
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.master_bedroom_mp_sensor_temperature_measurement
-                name: Master Bedroom
-                graph: line
-                style: |
-                  .name {
-                    font-size: 14px !important;
-                    font-weight: normal !important;
-                  }
-                  .icon {
-                    color: #ffffff !important;
-                  }
-              - type: sensor
-                entity: sensor.kids_bedroom_mp_sensor_temperature_measurement
-                name: Kids Bedroom
-                graph: line
-                style: |
-                  .name {
-                    font-size: 14px !important;
-                    font-weight: normal !important;
-                  }
-                  .icon {
-                    color: #ffffff !important;
-                  }
-          - type: horizontal-stack
-            cards:
-              - type: sensor
-                entity: sensor.guest_bedroom_mp_sensor_temperature_measurement
-                name: Guest Bedroom
-                graph: line
-                style: |
-                  .name {
-                    font-size: 14px !important;
-                    font-weight: normal !important;
-                  }
-                  .icon {
-                    color: #ffffff !important;
-                  }
-              - type: sensor
-                entity: sensor.media_room_mp_sensor_temperature_measurement
-                name: Media Room
-                graph: line
-                style: |
-                  .name {
-                    font-size: 14px !important;
-                    font-weight: normal !important;
-                  }
-                  .icon {
-                    color: #ffffff !important;
-                  }
+          - type: gauge
+            entity: sensor.pv_eday
+            min: 0
+            max: 40
+            severity:
+              red: 0
+              yellow: 10
+              green: 20
           - type: horizontal-stack
             cards:
               - type: button
@@ -564,8 +469,734 @@ views:
                 color: #ffffff !important;
               }
         type: vertical-stack
+      - cards:
+          - type: thermostat
+            name: Master Bedroom
+            entity: climate.master_bedroom
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.master_bedroom_mp_sensor_temperature_measurement
+                name: Master Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+              - type: sensor
+                entity: sensor.kids_bedroom_mp_sensor_temperature_measurement
+                name: Kids Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.guest_bedroom_mp_sensor_temperature_measurement
+                name: Guest Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+              - type: sensor
+                entity: sensor.media_room_mp_sensor_temperature_measurement
+                name: Media Room
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+          - type: entities
+            title: SONOS
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+            entities:
+              - entity: media_player.master_bedroom
+                name: 'Play:5'
+              - entity: media_player.guest_bedroom
+                name: 'Play:1'
+              - entity: media_player.living_room
+                name: 'Play:3'
+            show_header_toggle: false
+          - type: entities
+            title: Scenes
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+            entities:
+              - entity: scene.blackout
+              - entity: scene.night
+              - entity: scene.cleanup
+          - type: history-graph
+            title: NAS
+            style: |
+                .card-header {
+                  font-weight: 500;
+                }
+            entities:
+              - entity: sensor.ts453pro_cpu_usage
+                name: CPU
+              - entity: sensor.ts453pro_memory_usage
+                name: RAM
+              - entity: sensor.ts453pro_volume_used_datavol1
+                name: HDD
+            hours_to_show: 120
+            refresh_interval: 0
+        type: vertical-stack
     icon: 'mdi:home'
     path: home
     title: Home
-  
-  
+
+
+
+
+
+  - badges:
+      - entity: person.ashish_upadhayay
+        name: Ashish
+      - entity: person.archana_maharjan
+        name: Archana
+    cards:
+      - cards:
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.master_bedroom_mp_sensor_temperature_measurement
+                name: Master Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+              - type: sensor
+                entity: sensor.kids_bedroom_mp_sensor_temperature_measurement
+                name: Kids Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+          - type: horizontal-stack
+            cards:
+              - type: sensor
+                entity: sensor.guest_bedroom_mp_sensor_temperature_measurement
+                name: Guest Bedroom
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+              - type: sensor
+                entity: sensor.media_room_mp_sensor_temperature_measurement
+                name: Media Room
+                graph: line
+                style: |
+                  .name {
+                    font-size: 14px !important;
+                    font-weight: normal !important;
+                  }
+                  .icon {
+                    color: #ffffff !important;
+                  }
+          - type: glance
+            title: Porch
+            entities:
+              - entity: switch.2805375584f3eb78a549_2
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity:  switch.2805375584f3eb78a549_3
+                name: Accent Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Hallway
+            entities:
+              - entity: binary_sensor.hallway_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity:  switch.2805375584f3eb78a549_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Master Bedroom
+            entities:
+              - entity: binary_sensor.master_bedroom_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: switch.61308075ecfabc3082f8
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.master_bedroom_lamp
+                name: Table Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: light.20363802d8bfc00c2851
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: fan.master_bedroom
+                name: Fan
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: camera.master_bedroom_camera
+                name: Camera
+                icon: 'mdi:cctv'
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: media_player.master_bedroom_gnh
+                name: GNH
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Bathroom
+            entities:
+              - entity: switch.28053755bcddc2219b59_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity:  switch.28053755bcddc2219b59_2
+                name: Downlight
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity:  switch.28053755bcddc2219b59_3
+                name: Exhaust
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Toilet
+            entities:
+              - entity: switch.613080753c71bf30c177
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Wardrobe
+            entities:
+              - entity: binary_sensor.wardrobe_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity:  switch.613080753c71bf30c321
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+        type: vertical-stack
+      - cards:
+          - type: sensor
+            entity: sensor.garage_mp_sensor_temperature_measurement
+            name: Garage
+            graph: line
+            style: |
+              .name {
+                font-size: 14px !important;
+                font-weight: normal !important;
+              }
+              .icon {
+                color: #ffffff !important;
+              }
+          - type: glance
+            title: Garage
+            entities:
+              - entity: switch.61308075ecfabc308206
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: cover.garage_door
+                name: Door
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: camera.garage_camera
+                name: Camera
+                icon: 'mdi:cctv'
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Kids Bedroom
+            entities:
+              - entity: binary_sensor.kids_bedroom_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: switch.61308075ecfabc3083f8
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.20363802d8bfc00c2df5
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: cover.51681463d8bfc0dc7869
+                name: Blinds
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.kids_bedroom_fan
+                name: Fan
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: camera.kids_bedroom_camera
+                name: Camera
+                icon: 'mdi:cctv'
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: media_player.kids_bedroom_ghm
+                name: GHM
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Kids Bathroom
+            entities:
+              - entity: binary_sensor.kids_bathroom_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: switch.1745257568c63aeea6d7_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.1745257568c63aeea6d7_2
+                name: Downlight
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Kids Toilet
+            entities:
+              - entity: switch.17452575500291642e2b_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.17452575500291642e2b_2
+                name: Exhaust
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Laundry
+            entities:
+              - entity: switch.7835046550029164312a
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.washing_machine
+                name: Washing Machine
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Guest Bedroom
+            entities:
+              - entity: switch.61308075ecfabc30872d
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.guest_bedroom_lamp
+                name: Table Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+        type: vertical-stack
+      - cards:
+          - type: glance
+            title: Media Room
+            entities:
+              - entity: switch.61308075ecfabc2ffaa0
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.media_room_lamp
+                name: Floor Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: switch.av_receiver
+                name: AV Receiver
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.projector
+                name: Projector
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: media_player.media_room_ghm
+                name: GHM
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: media-control
+            entity: media_player.media_room_cc
+          - type: glance
+            title: Living Room
+            entities:
+              - entity: binary_sensor.living_room_motion_sensor_motion
+                name: Motion
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: switch.2805375584f3eb78abc5_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: camera.living_room_camera
+                name: Camera
+                icon: 'mdi:cctv'
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+              - entity: media_player.living_room_gnm
+                name: GNM
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: media-control
+            entity: media_player.living_room_cc
+          - type: glance
+            title: Kitchen
+            entities:
+              - entity: switch.2805375584f3eb78abc5_2
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.kitchen_lightstrip
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: switch.dishwasher
+                name: Dishwasher
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Dining
+            entities:
+              - entity: switch.2805375584f3eb78abc5_3
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Pantry
+            entities:
+              - entity: switch.783504655002916432f4
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Alfresco
+            entities:
+              - entity: switch.61308075ecfabc301587
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+            show_name: true
+            show_state: false
+            columns: 3
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+        type: vertical-stack
+    icon: ''
+    path: rooms
+    title: Rooms

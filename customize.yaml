@@ -182,7 +182,7 @@ sensor.media_room_mp_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.bathroom_wl_sensor_water:
   friendly_name: Bathroom Water Leak Sensor Status
-  icon: mdi:pipe-leak
+  icon: mdi:water-check
 sensor.bathroom_wl_sensor_temperature_measurement:
   friendly_name: Bathroom Water Leak Sensor Temperature
   icon: mdi:thermometer
@@ -191,7 +191,7 @@ sensor.bathroom_wl_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.kids_bathroom_wl_sensor_water:
   friendly_name: Kids Bathroom Water Leak Sensor Status
-  icon: mdi:pipe-leak
+  icon: mdi:water-check
 sensor.kids_bathroom_wl_sensor_temperature_measurement:
   friendly_name: Kids Bathroom Water Leak Sensor Temperature
   icon: mdi:thermometer
@@ -200,7 +200,7 @@ sensor.kids_bathroom_wl_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.kitchen_wl_sensor_water:
   friendly_name: Kitchen Water Leak Sensor Status
-  icon: mdi:pipe-leak
+  icon: mdi:water-check
 sensor.kitchen_wl_sensor_temperature_measurement:
   friendly_name: Kitchen Water Leak Sensor Temperature
   icon: mdi:thermometer

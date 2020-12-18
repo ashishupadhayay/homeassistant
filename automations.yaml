@@ -1,3 +1,4 @@
+# Away
 - id: away
   alias: Trigger - Away
   trigger:
@@ -17,31 +18,12 @@
           entity_id: person.archana_maharjan
           state: not_home
   action:
-    - service: switch.turn_on
-      data:
-        entity_id:
-          - switch.armed
     - service: scene.turn_on
       data:
         entity_id: scene.blackout
   mode: single
 
-- id: home
-  alias: Trigger - Home
-  trigger:
-    - platform: state
-      entity_id: person.ashish_upadhayay
-      to: home
-    - platform: state
-      entity_id: person.archana_maharjan
-      to: home
-  action:
-    service: switch.turn_off
-    data:
-      entity_id:
-        - switch.armed
-  mode: single
-
+# Sunrise
 - id: sunrise
   alias: Routine - Sunrise
   trigger:
@@ -58,6 +40,7 @@
           - cover.51681463d8bfc0dc7869
   mode: single
 
+# Sunset
 - id: sunset
   alias: Routine - Sunset
   trigger:
@@ -75,24 +58,7 @@
           - cover.51681463d8bfc0dc7869
   mode: single
 
-- id: bedtime-notification
-  alias: Notification - Bedtime
-  trigger:
-    platform: time
-    at: '20:45'
-  action:
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.speakers
-        media_content_id: http://192.168.86.4:8123/local/notification.mp3
-        media_content_type: music
-    - delay: '3'
-    - service: tts.google_translate_say
-      data:
-        entity_id: media_player.speakers
-        message: Bedtime routine will start in 15 minutes.
-  mode: single
-
+# Bedtime
 - id: bedtime
   alias: Routine - Bedtime
   trigger:
@@ -104,49 +70,7 @@
       entity_id: scene.night
   mode: single
 
-- id: kbb-pushed
-  alias: Trigger - KB Button PUSHED
-  trigger:
-    platform: event
-    event_type: smartthings.button
-    event_data:
-      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
-      value: pushed
-  action:
-    service: scene.turn_on
-    data:
-      entity_id: scene.kids_bedroom_on
-  mode: single
-
-- id: kbb-double
-  alias: Trigger - KB Button DOUBLE
-  trigger:
-    platform: event
-    event_type: smartthings.button
-    event_data:
-      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
-      value: double
-  action:
-    service: scene.turn_on
-    data:
-      entity_id: scene.kids_bedroom_off
-  mode: single
-
-- id: kbb-held
-  alias: Trigger - KB Button HELD
-  trigger:
-    platform: event
-    event_type: smartthings.button
-    event_data:
-      device_id: 52bfc937-e4af-4779-81dc-c483227c02a2
-      value: held
-  action:
-    - service: cover.toggle
-      data:
-        entity_id:
-          - cover.51681463d8bfc0dc7869
-  mode: single
-
+# Front Door
 - id: front-door-open
   alias: Trigger - Front Door OPEN
   trigger:
@@ -181,6 +105,7 @@
         - switch.2805375584f3eb78a549_2
   mode: single
 
+# Hallway
 - id: hallway-motion-on
   alias: Trigger - Hallway MOTION ON
   trigger:
@@ -216,6 +141,7 @@
         - switch.2805375584f3eb78a549_1
   mode: single
 
+# Master Bedroom
 - id: master-bedroom-motion-off
   alias: Trigger - Master Bedroom MOTION OFF
   trigger:
@@ -229,6 +155,47 @@
       entity_id: scene.master_bedroom_off
   mode: single
 
+- id: 'master-bedroom-hot'
+  alias: Trigger - Master Bedroom HOT
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_door_mp_sensor_temperature_measurement
+    above: 21
+  action:
+    service: fan.turn_on
+    data:
+      entity_id: fan.master_bedroom
+  mode: single
+
+- id: 'master-bedroom-cold'
+  alias: Trigger - Master Bedroom COLD
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_door_mp_sensor_temperature_measurement
+    below: 18
+  action:
+    service: fan.turn_off
+    data:
+      entity_id: fan.master_bedroom
+  mode: single
+
+- id: master-bedroom-door-close
+  alias: Trigger - Master Bedroom Door CLOSE
+  trigger:
+    platform: state
+    entity_id: binary_sensor.master_bedroom_mp_sensor_contact
+    to: 'off'
+  condition:
+    - condition: time
+      before: '06:00:00'
+      after: '21:00:00'
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.night
+  mode: single
+
+# Wardrobe
 - id: wardrobe-motion-on
   alias: Trigger - Wardrobe MOTION ON
   trigger:
@@ -260,6 +227,7 @@
         - switch.613080753c71bf30c321
   mode: single
 
+# Kids Bedroom
 - id: kids-bedroom-motion-on
   alias: Trigger - Kids Bedroom MOTION ON
   trigger:
@@ -289,6 +257,74 @@
       entity_id: scene.kids_bedroom_off
   mode: single
 
+- id: 'kids-bedroom-hot'
+  alias: Trigger - Kids Bedroom HOT
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_door_mp_sensor_temperature_measurement
+    above: 21
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.kids_bedroom_fan
+  mode: single
+
+- id: 'kids-bedroom-cold'
+  alias: Trigger - Kids Bedroom COLD
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_door_mp_sensor_temperature_measurement
+    below: 18
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.kids_bedroom_fan
+  mode: single
+
+- id: kbb-pushed
+  alias: Trigger - KB Button PUSHED
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 73d77b47-ff24-4a05-a78b-b1b8c5a5bb17
+      value: pushed
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_on
+  mode: single
+
+- id: kbb-double
+  alias: Trigger - KB Button DOUBLE
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 73d77b47-ff24-4a05-a78b-b1b8c5a5bb17
+      value: double
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.kids_bedroom_off
+  mode: single
+
+- id: kbb-held
+  alias: Trigger - KB Button HELD
+  trigger:
+    platform: event
+    event_type: smartthings.button
+    event_data:
+      device_id: 73d77b47-ff24-4a05-a78b-b1b8c5a5bb17
+      value: held
+  action:
+    - service: cover.toggle
+      data:
+        entity_id:
+          - cover.51681463d8bfc0dc7869
+  mode: single
+
+# Kids Bathroom
 - id: kids-bathroom-motion-on
   alias: Trigger - Kids Bathroom MOTION ON
   trigger:
@@ -322,6 +358,7 @@
         - switch.17452575500291642e2b_1
   mode: single
 
+# Living Room
 - id: living-room-motion-on
   alias: Trigger - Living Room MOTION ON
   trigger:
@@ -353,20 +390,4 @@
       entity_id:
         - switch.2805375584f3eb78abc5_1
         - switch.2805375584f3eb78abc5_2
-  mode: single
-
-- id: master-bedroom-door-close
-  alias: Trigger - Master Bedroom Door CLOSE
-  trigger:
-    platform: state
-    entity_id: binary_sensor.master_bedroom_mp_sensor_contact
-    to: 'off'
-  condition:
-    - condition: time
-      before: '06:00:00'
-      after: '21:00:00'
-  action:
-    service: scene.turn_on
-    data:
-      entity_id: scene.night
   mode: single
