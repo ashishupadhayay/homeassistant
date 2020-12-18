@@ -104,9 +104,7 @@ ness_alarm:
     - name: Back Door (Zone 3)
       id: 3
 
-group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
 scene: !include scenes.yaml
 
 homeassistant:
