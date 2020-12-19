@@ -227,10 +227,10 @@ scene.cleanup:
   icon: mdi:broom
 
 # Ring
-binary_sensor.ring_video_doorbell_motion:
+binary_sensor.ring_doorbell_motion:
   friendly_name: Ring Video Doorbell Motion
   icon: mdi:motion-sensor
-sensor.ring_video_doorbell_battery:
+sensor.ring_doorbell_battery:
   friendly_name: Ring Video Doorbell Battery
   icon: mdi:battery-heart-variant
 

@@ -278,9 +278,9 @@ views:
                 name: Master Bedroom
                 show_state: false
                 tap_action:
-                  action: toggle
-                hold_action:
                   action: more-info
+                hold_action:
+                  action: none
                 style: |
                   ha-card {
                     background: {% if is_state('binary_sensor.master_bedroom_zone_1', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
@@ -549,21 +549,6 @@ views:
               - entity: scene.blackout
               - entity: scene.night
               - entity: scene.cleanup
-          - type: history-graph
-            title: NAS
-            style: |
-                .card-header {
-                  font-weight: 500;
-                }
-            entities:
-              - entity: sensor.ts453pro_cpu_usage
-                name: CPU
-              - entity: sensor.ts453pro_memory_usage
-                name: RAM
-              - entity: sensor.ts453pro_volume_used_datavol1
-                name: HDD
-            hours_to_show: 120
-            refresh_interval: 0
         type: vertical-stack
     icon: 'mdi:home'
     path: home
