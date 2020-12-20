@@ -433,9 +433,9 @@ views:
                 name: Kids Bathroom
                 show_state: false
                 tap_action:
-                  action: toggle
-                hold_action:
                   action: more-info
+                hold_action:
+                  action: none
                 style: |
                   ha-card {
                     background: {% if is_state('binary_sensor.kids_bathroom_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
@@ -1033,6 +1033,13 @@ views:
                 name: Projector
                 tap_action:
                   action: toggle
+                hold_action:
+                  action: none
+              - entity: camera.media_room_camera
+                name: Camera
+                icon: 'mdi:cctv'
+                tap_action:
+                  action: more-info
                 hold_action:
                   action: none
               - entity: media_player.media_room_ghm

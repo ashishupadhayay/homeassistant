@@ -30,14 +30,12 @@
 - id: home
   alias: Trigger - Home
   trigger:
-    - platform: zone
-      event: enter
-      zone: zone.home
+    - platform: state
       entity_id: person.ashish_upadhayay
-    - platform: zone
-      event: enter
-      zone: zone.home
+      to: home
+    - platform: state
       entity_id: person.archana_maharjan
+      to: home
   action:
     service: alarm_control_panel.alarm_disarm
     data:
