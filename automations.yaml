@@ -36,6 +36,15 @@
     - platform: state
       entity_id: person.archana_maharjan
       to: home
+  condition:
+    - condition: state
+      entity_id: person.ashish_upadhayay
+      state: not_home
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: person.archana_maharjan
+          state: not_home
   action:
     service: alarm_control_panel.alarm_disarm
     data:
@@ -245,6 +254,33 @@
     data:
       entity_id:
         - switch.613080753c71bf30c321
+  mode: single
+
+# Garage Door
+- id: garage-door-open
+  alias: Trigger - Garage Door OPEN
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_mp_sensor_contact
+    to: 'on'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.61308075ecfabc308206
+  mode: single
+
+- id: garage-door-close
+  alias: Trigger - Garage Door CLOSE
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_mp_sensor_contact
+    to: 'off'
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.61308075ecfabc308206
   mode: single
 
 # Kids Bedroom
