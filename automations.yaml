@@ -38,13 +38,8 @@
       to: home
   condition:
     - condition: state
-      entity_id: person.ashish_upadhayay
-      state: not_home
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: person.archana_maharjan
-          state: not_home
+      entity_id: alarm_control_panel.alarm_panel
+      state: armed_away
   action:
     service: alarm_control_panel.alarm_disarm
     data:
