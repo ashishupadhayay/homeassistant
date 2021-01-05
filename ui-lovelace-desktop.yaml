@@ -23,7 +23,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.front_door_mp_sensor_contact', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.front_door_mp_sensor_contact', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -38,7 +38,7 @@ views:
                   action: more-info
                 style: |
                   ha-card {
-                    background: {% if is_state('cover.garage_door', 'open') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('cover.garage_door', 'open') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -268,7 +268,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.front_door_zone_2', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.front_door_zone_2', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -283,7 +283,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.master_bedroom_zone_1', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.master_bedroom_zone_1', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -298,7 +298,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.back_door_zone_3', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.back_door_zone_3', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -316,7 +316,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.hallway_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.hallway_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -332,7 +332,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.master_bedroom_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.master_bedroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -348,7 +348,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -366,7 +366,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.kids_bedroom_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.kids_bedroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -382,7 +382,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.kids_bathroom_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.kids_bathroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -398,7 +398,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.living_room_motion_sensor_motion', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.living_room_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -423,7 +423,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.bathroom_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.bathroom_wl_sensor_water', 'on') %} rrgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -438,7 +438,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.kids_bathroom_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.kids_bathroom_wl_sensor_water', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -453,7 +453,7 @@ views:
                   action: none
                 style: |
                   ha-card {
-                    background: {% if is_state('binary_sensor.kitchen_wl_sensor_water', 'on') %} rgba(0, 0, 0, 0.4) {% endif %};
+                    background: {% if is_state('binary_sensor.kitchen_wl_sensor_water', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -553,11 +553,6 @@ views:
     icon: 'mdi:home'
     path: home
     title: Home
-
-
-
-
-
   - badges:
       - entity: person.ashish_upadhayay
         name: Ashish
@@ -626,7 +621,7 @@ views:
                   action: toggle
                 hold_action:
                   action: none
-              - entity:  switch.2805375584f3eb78a549_3
+              - entity: switch.2805375584f3eb78a549_3
                 name: Accent Light
                 tap_action:
                   action: toggle
@@ -651,7 +646,7 @@ views:
                   action: more-info
                 hold_action:
                   action: none
-              - entity:  switch.2805375584f3eb78a549_1
+              - entity: switch.2805375584f3eb78a549_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -732,13 +727,13 @@ views:
                   action: toggle
                 hold_action:
                   action: none
-              - entity:  switch.28053755bcddc2219b59_2
+              - entity: switch.28053755bcddc2219b59_2
                 name: Downlight
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity:  switch.28053755bcddc2219b59_3
+              - entity: switch.28053755bcddc2219b59_3
                 name: Exhaust
                 tap_action:
                   action: toggle
@@ -782,7 +777,7 @@ views:
                   action: more-info
                 hold_action:
                   action: none
-              - entity:  switch.613080753c71bf30c321
+              - entity: switch.613080753c71bf30c321
                 name: Light
                 tap_action:
                   action: toggle

@@ -185,6 +185,10 @@
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
     above: 24
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
   action:
     service: fan.turn_on
     data:
@@ -197,6 +201,10 @@
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
     below: 18
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
   action:
     service: fan.turn_off
     data:
@@ -216,7 +224,7 @@
   action:
     service: scene.turn_on
     data:
-      entity_id: scene.night
+      entity_id: scene.dark
   mode: single
 
 # Wardrobe
@@ -229,7 +237,7 @@
   condition:
     - condition: time
       before: 06:00:00
-      after: '18:00:00'
+      after: '21:00:00'
   action:
     service: switch.turn_on
     data:
@@ -314,6 +322,10 @@
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
     above: 24
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
   action:
     service: switch.turn_on
     data:
@@ -326,6 +338,10 @@
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
     below: 18
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
   action:
     service: switch.turn_off
     data:
@@ -369,7 +385,7 @@
       device_id: 73d77b47-ff24-4a05-a78b-b1b8c5a5bb17
       value: held
   action:
-    - service: cover.toggle
+    - service: cover.close_cover
       data:
         entity_id:
           - cover.51681463d8bfc0dc7869

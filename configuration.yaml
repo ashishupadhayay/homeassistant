@@ -1,10 +1,11 @@
+
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
 # Text to speech
 tts:
   - platform: google_translate
- 
+
 # Theme
 frontend:
   themes: !include themes.yaml
@@ -98,6 +99,8 @@ dyson:
 ness_alarm:
   host: 192.168.86.10
   port: 2401
+  scan_interval:
+    seconds: 2
   zones:
     - name: Master Bedroom (Zone 1)
       id: 1
@@ -106,7 +109,9 @@ ness_alarm:
     - name: Back Door (Zone 3)
       id: 3
 
+group: !include groups.yaml
 automation: !include automations.yaml
+script: !include scripts.yaml
 scene: !include scenes.yaml
 
 homeassistant:
