@@ -184,7 +184,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
-    above: 24
+    above: 22
   condition:
     - condition: time
       before: 06:00:00
@@ -200,7 +200,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
-    below: 18
+    below: 20
   condition:
     - condition: time
       before: 06:00:00
@@ -321,7 +321,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
-    above: 24
+    above: 22
   condition:
     - condition: time
       before: 06:00:00
@@ -337,7 +337,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_door_mp_sensor_temperature_measurement
-    below: 18
+    below: 20
   condition:
     - condition: time
       before: 06:00:00
