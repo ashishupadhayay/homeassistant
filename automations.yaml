@@ -62,6 +62,14 @@
       data:
         entity_id:
           - cover.51681463d8bfc0dc7869
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.kids_bedroom_fan
+    - service: fan.turn_off
+      data:
+        entity_id:
+          - fan.master_bedroom
   mode: single
 
 # Sunset
