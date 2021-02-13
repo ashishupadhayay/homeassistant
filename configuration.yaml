@@ -109,6 +109,11 @@ ness_alarm:
     - name: Back Door (Zone 3)
       id: 3
 
+# Withings
+withings:
+  client_id: !secret withings_client_id
+  client_secret: !secret withings_client_secret
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
