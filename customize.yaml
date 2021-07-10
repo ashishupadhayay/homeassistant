@@ -76,11 +76,11 @@ switch.61308075ecfabc301587:
   icon: mdi:lightbulb
 
 # Tuya Lightstrip
-light.20363802d8bfc00c2851:
-  friendly_name: Workstation RGB Lightstrip
-  icon: mdi:led-strip-variant
 light.20363802d8bfc00c2df5:
   friendly_name: Kids Bedroom RGB Lightstrip
+  icon: mdi:led-strip-variant
+light.20363802d8bfc00c2851:
+  friendly_name: Guest Bedroom RGB Lightstrip
   icon: mdi:led-strip-variant
   
 # Tuya Blinds
@@ -95,26 +95,20 @@ light.master_bedroom_lamp:
 light.guest_bedroom_lamp:
   friendly_name: Guest Bedroom Table Lamp
   icon: mdi:lamp
-light.media_room_lamp:
-  friendly_name: Media Room Floor Lamp
-  icon: mdi:floor-lamp
-light.kitchen_lightstrip:
-  friendly_name: Kitchen RGB Lightstrip
+light.media_room_lightstrip:
+  friendly_name: Media Room RGB Lightstrip
   icon: mdi:led-strip-variant
+light.living_room_lamp:
+  friendly_name: Living Room Floor Lamp
+  icon: mdi:floor-lamp
 
 # Meross
 cover.garage_door:
   friendly_name: Garage Door
   icon: mdi:garage
-switch.kids_bedroom_fan:
-  friendly_name: Kids Bedroom Fan
-  icon: mdi:fan
 switch.washing_machine:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
-switch.guest_bedroom_fan:
-  friendly_name: Guest Bedroom Fan
-  icon: mdi:fan
 switch.av_receiver:
   friendly_name: AV Receiver
   icon: mdi:amplifier
@@ -207,11 +201,11 @@ sensor.kitchen_wl_sensor_temperature_measurement:
 sensor.kitchen_wl_sensor_battery:
   friendly_name: Kitchen Water Leak Sensor Battery
   icon: mdi:battery-heart-variant
-sensor.kids_bedroom_button_temperature_measurement:
-  friendly_name: Kids Bedroom Button Temperature
+sensor.button_temperature_measurement:
+  friendly_name: Button Temperature
   icon: mdi:thermometer
-sensor.kids_bedroom_button_battery:
-  friendly_name: Kids Bedroom Button Battery
+sensor.button_battery:
+  friendly_name: Button Battery
   icon: mdi:battery-heart-variant
 switch.tv_samsung_6_series_60:
   friendly_name: Living Room TV
@@ -235,17 +229,11 @@ sensor.ring_doorbell_battery:
   icon: mdi:battery-heart-variant
 
 # IKEA
-binary_sensor.hallway_motion_sensor_motion:
-  friendly_name: Hallway Motion
+binary_sensor.porch_motion_sensor_motion:
+  friendly_name: Porch Motion
   icon: mdi:motion-sensor
-sensor.hallway_motion_sensor_battery:
-  friendly_name: Hallway Motion Sensor Battery
-  icon: mdi:battery-heart-variant
-binary_sensor.master_bedroom_motion_sensor_motion:
-  friendly_name: Master Bedroom Motion
-  icon: mdi:motion-sensor
-sensor.master_bedroom_motion_sensor_battery:
-  friendly_name: Master Bedroom Motion Sensor Battery
+sensor.porch_motion_sensor_battery:
+  friendly_name: Porch Motion Sensor Battery
   icon: mdi:battery-heart-variant
 binary_sensor.wardrobe_motion_sensor_motion:
   friendly_name: Wardrobe Motion
@@ -265,56 +253,29 @@ binary_sensor.kids_bathroom_motion_sensor_motion:
 sensor.kids_bathroom_motion_sensor_battery:
   friendly_name: Kids Bathroom Motion Sensor Battery
   icon: mdi:battery-heart-variant
-binary_sensor.living_room_motion_sensor_motion:
-  friendly_name: Living Room Motion
-  icon: mdi:motion-sensor
-sensor.living_room_motion_sensor_battery:
-  friendly_name: Living Room Motion Sensor Battery
-  icon: mdi:battery-heart-variant
 
 # NESS
 binary_sensor.master_bedroom_zone_1:
   friendly_name: Master Bedroom
   icon: mdi:motion-sensor
-binary_sensor.front_door_zone_2:
-  friendly_name: Front Door
+binary_sensor.hallway_zone_2:
+  friendly_name: Hallway
   icon: mdi:motion-sensor
-binary_sensor.back_door_zone_3:
-  friendly_name: Back Door
+binary_sensor.living_room_zone_3:
+  friendly_name: Living Room
   icon: mdi:motion-sensor
 
 # Google
 sensor.google_wifi_status:
   friendly_name: WiFi
   icon: mdi:wifi
-sensor.google_wifi_uptime:
-  friendly_name: Uptime
-  icon: mdi:timer
-sensor.google_wifi_local_ip:
-  friendly_name: Local IP
-  icon: mdi:ip-network
-media_player.master_bedroom_gnh:
-  friendly_name: Master Bedroom GNH
-  icon: mdi:google-home
-media_player.kids_bedroom_ghm:
-  friendly_name: Kids Bedroom GHM
-  icon: mdi:google-home
-media_player.media_room_ghm:
-  friendly_name: Media Room GHM
-  icon: mdi:google-home
-media_player.living_room_gnm:
-  friendly_name: Living Room GNM
-  icon: mdi:google-home
 
 # SONOS
 media_player.master_bedroom:
-  friendly_name: 'Play:5'
-  icon: mdi:speaker
-media_player.guest_bedroom:
-  friendly_name: 'Play:1'
-  icon: mdi:speaker
-media_player.living_room:
   friendly_name: 'Play:3'
+  icon: mdi:speaker
+media_player.kids_bedroom:
+  friendly_name: 'Play:1'
   icon: mdi:speaker
 
 # SEMS Portal
@@ -323,14 +284,14 @@ sensor.pv_eday:
   icon: mdi:white-balance-sunny
 
 # Dyson
-fan.master_bedroom:
+fan.pure_hot_cool_link:
   friendly_name: Master Bedroom Fan
   icon: mdi:air-conditioner
 
 # Speedtest
 sensor.speedtest_download:
   friendly_name: Internet
-  icon: mdi:web
+  icon: mdi:download
 
 # Ashish Pixel 3
 device_tracker.ashish_pixel_3:
@@ -341,3 +302,11 @@ device_tracker.ashish_pixel_3:
 device_tracker.archana_pixel_3:
   friendly_name: Archana Pixel 3
   icon: mdi:cellphone-android
+
+# Home Assistant
+scene.blackout:
+  friendly_name: All Off
+  icon: mdi:lightbulb-group-off
+scene.night:
+  friendly_name: Bed Time
+  icon: mdi:weather-night

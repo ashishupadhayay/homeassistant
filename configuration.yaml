@@ -20,22 +20,6 @@ camera:
     name: Garage Camera
     still_image_url: /local/wyze.png
     stream_source: !secret garage_camera
-  - platform: generic
-    name: Master Bedroom Camera
-    still_image_url: /local/wyze.png
-    stream_source: !secret master_bedroom_camera
-  - platform: generic
-    name: Kids Bedroom Camera
-    still_image_url: /local/wyze.png
-    stream_source: !secret kids_bedroom_camera
-  - platform: generic
-    name: Media Room Camera
-    still_image_url: /local/wyze.png
-    stream_source: !secret media_room_camera
-  - platform: generic
-    name: Living Room Camera
-    still_image_url: /local/wyze.png
-    stream_source: !secret living_room_camera
 
 # Sensor
 sensor:
@@ -89,24 +73,18 @@ device_tracker:
     hosts:
       archana_pixel_3: 192.168.86.80
 
-# Dyson
-dyson:
-  username: !secret dyson_username
-  password: !secret dyson_password
-  language: AU
-
 # NESS
 ness_alarm:
-  host: 192.168.86.10
+  host: 192.168.86.46
   port: 2401
   scan_interval:
     seconds: 2
   zones:
     - name: Master Bedroom (Zone 1)
       id: 1
-    - name: Front Door (Zone 2)
+    - name: Hallway (Zone 2)
       id: 2
-    - name: Back Door (Zone 3)
+    - name: Living Room (Zone 3)
       id: 3
 
 # Withings
