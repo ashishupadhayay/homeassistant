@@ -291,7 +291,7 @@ fan.pure_hot_cool_link:
 # Speedtest
 sensor.speedtest_download:
   friendly_name: Internet
-  icon: mdi:download
+  icon: mdi:earth
 
 # Ashish Pixel 3
 device_tracker.ashish_pixel_3:
@@ -310,3 +310,6 @@ scene.blackout:
 scene.night:
   friendly_name: Bed Time
   icon: mdi:weather-night
+scene.lock:
+  friendly_name: Lock
+  icon: mdi:lock-outline

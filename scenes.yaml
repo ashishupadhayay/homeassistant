@@ -1,121 +1,208 @@
 - id: blackout
   name: Blackout
   entities:
-    # Porch
+    # Switch (Porch)
     switch.2805375584f3eb78a549_2: off
     switch.2805375584f3eb78a549_3: off
-    # Hallway
+    # Switch (Hallway)
     switch.2805375584f3eb78a549_1: off
-    # Master Bedroom
+    # Switch (Master Bedroom)
     switch.61308075ecfabc3082f8: off
+    # Light (Master Bedroom)
     light.master_bedroom_lamp: off
+    # Fan (Master Bedroom)
     fan.pure_hot_cool_link: off
-    # Bathroom
+    # Switch (Bathroom)
     switch.28053755bcddc2219b59_1: off
     switch.28053755bcddc2219b59_2: off
     switch.28053755bcddc2219b59_3: off
-    # Toilet
+    # Switch (Toilet)
     switch.613080753c71bf30c177: off
-    # Wardrobe
+    # Switch (Wardrobe)
     switch.613080753c71bf30c321: off
-    # Garage
+    # Switch (Garage)
     switch.61308075ecfabc308206: off
-    # Kids Bedroom
+    # Switch (Kids Bedroom)
     switch.61308075ecfabc3083f8: off
+    # RGB Lightstrip (Kids Bedroom)
     light.20363802d8bfc00c2df5: off
-    # Kids Bathroom
+    # Switch (Kids Bathroom)
     switch.1745257568c63aeea6d7_1: off
     switch.1745257568c63aeea6d7_2: off
-    # Kids Toilet
+    # Switch (Kids Toilet)
     switch.17452575500291642e2b_1: off
     switch.17452575500291642e2b_2: off
-    # Laundry
+    # Switch (Laundry)
     switch.7835046550029164312a: off
-    # switch.washing_machine: off
-    # Guest Bedroom
+    # Washing Machine Outlet (Laundry)
+    switch.washing_machine: off
+    # Switch (Guest Bedroom)
     switch.61308075ecfabc30872d: off
+    # Light (Guest Bedroom)
     light.guest_bedroom_lamp: off
+    # RGB Lightstrip (Guest Bedroom)
     light.20363802d8bfc00c2851: off
-    # Media Room
+    # Switch (Media Room)
     switch.61308075ecfabc2ffaa0: off
+    # RGB Lightstrip (Media Room)
     light.media_room_lightstrip: off
+    # AV Receiver Outlet (Media Room)
     switch.av_receiver: off
+    # Projector Outlet (Media Room)
     switch.projector: off
-    # Living Room
+    # Switch (Living Room)
     switch.2805375584f3eb78abc5_1: off
+    # Light (Living Room)
     light.living_room_lamp: off
+    # TV (Living Room)
     switch.tv_samsung_6_series_60: off
-    # Kitchen
+    # Switch (Kitchen)
     switch.2805375584f3eb78abc5_2: off
-    # switch.dishwasher: off
-    # Dining
+    # Dishwasher Outlet (Kitchen)
+    switch.dishwasher: off
+    # Switch (Dining)
     switch.2805375584f3eb78abc5_3: off
-    # Pantry
+    # Switch (Pantry)
     switch.783504655002916432f4: off
-    # Alfresco
+    # Switch (Alfresco)
     switch.61308075ecfabc301587: off
   icon: mdi:lightbulb-group-off
 
 - id: night
   name: Night
   entities:
-    # Porch
+    # Switch (Porch)
     switch.2805375584f3eb78a549_2: off
     switch.2805375584f3eb78a549_3: off
-    # Hallway
+    # Switch (Hallway)
     switch.2805375584f3eb78a549_1: off
-    # Master Bedroom
+    # Switch (Master Bedroom)
     switch.61308075ecfabc3082f8: off
-    light.master_bedroom_lamp:
+    # Light (Master Bedroom)
+    light.master_bedroom_lamp: 
       state: on
       brightness: 62
       rgb_color: [255,255,255]
-    fan.pure_hot_cool_link: off
-    # Bathroom
+    # Switch (Bathroom)
     switch.28053755bcddc2219b59_1: off
     switch.28053755bcddc2219b59_2: off
     switch.28053755bcddc2219b59_3: off
-    # Toilet
+    # Switch (Toilet)
     switch.613080753c71bf30c177: off
-    # Wardrobe
+    # Switch (Wardrobe)
     switch.613080753c71bf30c321: off
-    # Garage
+    # Switch (Garage)
     switch.61308075ecfabc308206: off
-    # Kids Bedroom
+    # Switch (Kids Bedroom)
     switch.61308075ecfabc3083f8: off
-    light.20363802d8bfc00c2df5: off
-    # Kids Bathroom
-    switch.1745257568c63aeea6d7_1: off
-    switch.1745257568c63aeea6d7_2: off
-    # Kids Toilet
-    switch.17452575500291642e2b_1: off
-    switch.17452575500291642e2b_2: off
-    # Laundry
-    switch.7835046550029164312a: off
-    # switch.washing_machine: off
-    # Guest Bedroom
-    switch.61308075ecfabc30872d: off
-    light.guest_bedroom_lamp: off
-    light.20363802d8bfc00c2851: off
-    # Media Room
-    switch.61308075ecfabc2ffaa0: off
-    light.media_room_lightstrip: off
-    switch.av_receiver: off
-    switch.projector: off
-    # Living Room
-    switch.2805375584f3eb78abc5_1: off
-    light.living_room_lamp: 
+    # RGB Lightstrip (Kids Bedroom)
+    light.20363802d8bfc00c2df5:
       state: on
       brightness: 62
       rgb_color: [255,255,255]
+    # Switch (Kids Bathroom)
+    switch.1745257568c63aeea6d7_1: off
+    switch.1745257568c63aeea6d7_2: off
+    # Switch (Kids Toilet)
+    switch.17452575500291642e2b_1: off
+    switch.17452575500291642e2b_2: off
+    # Switch (Laundry)
+    switch.7835046550029164312a: off
+    # Switch (Guest Bedroom)
+    switch.61308075ecfabc30872d: off
+    # Light (Guest Bedroom)
+    light.guest_bedroom_lamp: off
+    # RGB Lightstrip (Guest Bedroom)
+    light.20363802d8bfc00c2851: off
+    # Switch (Media Room)
+    switch.61308075ecfabc2ffaa0: off
+    # RGB Lightstrip (Media Room)
+    light.media_room_lightstrip: off
+    # AV Receiver Outlet (Media Room)
+    switch.av_receiver: off
+    # Projector Outlet (Media Room)
+    switch.projector: off
+    # Switch (Living Room)
+    switch.2805375584f3eb78abc5_1: off
+    # Light (Living Room)
+    light.living_room_lamp:
+      state: on
+      brightness: 62
+      rgb_color: [255,255,255]
+    # TV (Living Room)
     switch.tv_samsung_6_series_60: off
-    # Kitchen
+    # Switch (Kitchen)
     switch.2805375584f3eb78abc5_2: off
-    # switch.dishwasher: off
-    # Dining
+    # Switch (Dining)
     switch.2805375584f3eb78abc5_3: off
-    # Pantry
+    # Switch (Pantry)
     switch.783504655002916432f4: off
-    # Alfresco
+    # Switch (Alfresco)
     switch.61308075ecfabc301587: off
   icon: mdi:weather-night
+
+- id: lock
+  name: Lock
+  entities:
+    # Switch (Porch)
+    switch.2805375584f3eb78a549_2: off
+    switch.2805375584f3eb78a549_3: off
+    # Switch (Hallway)
+    switch.2805375584f3eb78a549_1: off
+    # Switch (Master Bedroom)
+    switch.61308075ecfabc3082f8: off
+    # Light (Master Bedroom)
+    light.master_bedroom_lamp: off
+    # Fan (Master Bedroom)
+    fan.pure_hot_cool_link: off
+    # Switch (Bathroom)
+    switch.28053755bcddc2219b59_1: off
+    switch.28053755bcddc2219b59_2: off
+    switch.28053755bcddc2219b59_3: off
+    # Switch (Toilet)
+    switch.613080753c71bf30c177: off
+    # Switch (Wardrobe)
+    switch.613080753c71bf30c321: off
+    # Switch (Garage)
+    switch.61308075ecfabc308206: off
+    # Switch (Kids Bedroom)
+    switch.61308075ecfabc3083f8: off
+    # RGB Lightstrip (Kids Bedroom)
+    light.20363802d8bfc00c2df5: off
+    # Switch (Kids Bathroom)
+    switch.1745257568c63aeea6d7_1: off
+    switch.1745257568c63aeea6d7_2: off
+    # Switch (Kids Toilet)
+    switch.17452575500291642e2b_1: off
+    switch.17452575500291642e2b_2: off
+    # Switch (Laundry)
+    switch.7835046550029164312a: off
+    # Switch (Guest Bedroom)
+    switch.61308075ecfabc30872d: off
+    # Light (Guest Bedroom)
+    light.guest_bedroom_lamp: off
+    # RGB Lightstrip (Guest Bedroom)
+    light.20363802d8bfc00c2851: off
+    # Switch (Media Room)
+    switch.61308075ecfabc2ffaa0: off
+    # RGB Lightstrip (Media Room)
+    light.media_room_lightstrip: off
+    # AV Receiver Outlet (Media Room)
+    switch.av_receiver: off
+    # Projector Outlet (Media Room)
+    switch.projector: off
+    # Switch (Living Room)
+    switch.2805375584f3eb78abc5_1: off
+    # Light (Living Room)
+    light.living_room_lamp: off
+    # TV (Living Room)
+    switch.tv_samsung_6_series_60: off
+    # Switch (Kitchen)
+    switch.2805375584f3eb78abc5_2: off
+    # Switch (Dining)
+    switch.2805375584f3eb78abc5_3: off
+    # Switch (Pantry)
+    switch.783504655002916432f4: off
+    # Switch (Alfresco)
+    switch.61308075ecfabc301587: off
+  icon: mdi:lock-outline

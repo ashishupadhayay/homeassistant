@@ -7,11 +7,13 @@ views:
         name: Archana
     cards:
       - cards:
+          # Weather
           - type: weather-forecast
             entity: weather.67nav
             secondary_info_attribute: humidity
           - type: horizontal-stack
             cards:
+              # Front Door (Contact Sensor)
               - type: button
                 entity: binary_sensor.front_door_mp_sensor_contact
                 icon_height: 32px
@@ -27,6 +29,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Garage Door
               - type: button
                 entity: cover.garage_door
                 icon_height: 32px
@@ -42,6 +45,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Porch (Motion Sensor)
               - type: button
                 entity: binary_sensor.porch_motion_sensor_motion
                 icon_height: 32px
@@ -57,6 +61,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+          # Driveway (Camera)
           - type: picture-glance
             title: Driveway
             camera_image: camera.driveway_camera
@@ -76,86 +81,98 @@ views:
                   font-size: 14px !important;
                 }
             entities:
-              # Porch
+              # Switch (Porch)
               - entity: switch.2805375584f3eb78a549_2
                 state_color: true
               - entity: switch.2805375584f3eb78a549_3
                 state_color: true
-              # Hallway
+              # Switch (Hallway)
               - entity: switch.2805375584f3eb78a549_1
                 state_color: true
-              # Master Bedroom
+              # Switch (Master Bedroom)
               - entity: switch.61308075ecfabc3082f8
                 state_color: true
+              # Light (Master Bedroom)
               - entity: light.master_bedroom_lamp
+              # Fan (Master Bedroom)
               - entity: fan.pure_hot_cool_link
                 state_color: true
-              # Bathroom
+              # Switch (Bathroom)
               - entity: switch.28053755bcddc2219b59_1
                 state_color: true
               - entity: switch.28053755bcddc2219b59_2
                 state_color: true
               - entity: switch.28053755bcddc2219b59_3
                 state_color: true
-              # Toilet
+              # Switch (Toilet)
               - entity: switch.613080753c71bf30c177
                 state_color: true
-              # Wardrobe
+              # Switch (Wardrobe)
               - entity: switch.613080753c71bf30c321
                 state_color: true
-              # Garage
+              # Switch (Garage)
               - entity: switch.61308075ecfabc308206
                 state_color: true
-              # Kids Bedroom
+              # Switch (Kids Bedroom)
               - entity: switch.61308075ecfabc3083f8
                 state_color: true
+              # RGB Lightstrip (Kids Bedroom)
               - entity: light.20363802d8bfc00c2df5
-              # Kids Bathroom
+              # Switch (Kids Bathroom)
               - entity: switch.1745257568c63aeea6d7_1
                 state_color: true
               - entity: switch.1745257568c63aeea6d7_2
                 state_color: true
-              # Kids Toilet
+              # Switch (Kids Toilet)
               - entity: switch.17452575500291642e2b_1
                 state_color: true
               - entity: switch.17452575500291642e2b_2
                 state_color: true
-              # Laundry
+              # Switch (Laundry)
               - entity: switch.7835046550029164312a
                 state_color: true
+              # Washing Machine Outlet (Laundry)
               - entity: switch.washing_machine
                 state_color: true
-              # Guest Bedroom
+              # Switch (Guest Bedroom)
               - entity: switch.61308075ecfabc30872d
                 state_color: true
+              # Light (Guest Bedroom)
               - entity: light.guest_bedroom_lamp
+              # RGB Lightstrip (Guest Bedroom)
               - entity: light.20363802d8bfc00c2851
-              # Media Room
+              # Switch (Media Room)
               - entity: switch.61308075ecfabc2ffaa0
                 state_color: true
+              # RGB Lightstrip (Media Room)
               - entity: light.media_room_lightstrip
+              # AV Receiver Outlet (Media Room)
               - entity: switch.av_receiver
                 state_color: true
+              # Projector Outlet (Media Room)
               - entity: switch.projector
                 state_color: true
-              # Living Room
+              # Switch (Living Room)
               - entity: switch.2805375584f3eb78abc5_1
                 state_color: true
+              # Light (Living Room)
               - entity: light.living_room_lamp
+              # TV (Living Room)
               - entity: switch.tv_samsung_6_series_60
                 state_color: true
-              # Kitchen
+              # Switch (Kitchen)
               - entity: switch.2805375584f3eb78abc5_2
                 state_color: true
+              # Dishwasher Outlet (Kitchen)
               - entity: switch.dishwasher
                 state_color: true
-              # Dining
+              # Switch (Dining)
               - entity: switch.2805375584f3eb78abc5_3
                 state_color: true
-              # Pantry
+              # Switch (Pantry)
               - entity: switch.783504655002916432f4
                 state_color: true
-              # Alfresco
+              # Switch (Alfresco)
               - entity: switch.61308075ecfabc301587
                 state_color: true
             show_empty: false
@@ -163,6 +180,7 @@ views:
               - 'on'
         type: vertical-stack
       - cards:
+          # NESS Alarm
           - type: alarm-panel
             entity: alarm_control_panel.alarm_panel
             name: NESS Alarm
@@ -177,6 +195,7 @@ views:
               }
           - type: horizontal-stack
             cards:
+              # Motion Sensor (Hallway)
               - type: button
                 entity: binary_sensor.hallway_zone_2
                 icon_height: 32px
@@ -192,6 +211,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Motion Sensor (Master Bedroom)
               - type: button
                 entity: binary_sensor.master_bedroom_zone_1
                 icon_height: 32px
@@ -207,6 +227,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Motion Sensor (Wardrobe)
               - type: button
                 entity: binary_sensor.wardrobe_motion_sensor_motion
                 icon_height: 32px
@@ -224,6 +245,7 @@ views:
                   }
           - type: horizontal-stack
             cards:
+              # Motion Sensor (Kids Bedroom)
               - type: button
                 entity: binary_sensor.kids_bedroom_motion_sensor_motion
                 icon_height: 32px
@@ -239,6 +261,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Motion Sensor (Kids Bathroom)
               - type: button
                 entity: binary_sensor.kids_bathroom_motion_sensor_motion
                 icon_height: 32px
@@ -254,6 +277,7 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
+              # Motion Sensor (Living Room)
               - type: button
                 entity: binary_sensor.living_room_zone_3
                 icon_height: 32px
@@ -268,25 +292,46 @@ views:
                     background: {% if is_state('binary_sensor.living_room_zone_3', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
-                  }        
-          - type: gauge
+                  }
+          # Speedtest
+          - type: sensor
             entity: sensor.speedtest_download
-            severity:
-              green: 90
-              yellow: 80
-              red: 50
+            graph: line
             style: |
               .name {
                 font-size: 14px !important;
                 font-weight: normal !important;
               }
+              .icon {
+                color: #ffffff !important;
+              }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                entity: scene.night
+                icon_height: 32px
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              - type: button
+                entity: scene.cleanup
+                icon_height: 32px
+                style: |
+                  ha-card {
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
         type: vertical-stack
       - cards:
+          # Dyson Fan (Master Bedroom)
           - type: thermostat
             name: Master Bedroom
             entity: climate.pure_hot_cool_link
           - type: horizontal-stack
             cards:
+              # Temperature Sensor (Master Bedroom)
               - type: sensor
                 entity: sensor.master_bedroom_mp_sensor_temperature_measurement
                 name: Master Bedroom
@@ -299,6 +344,7 @@ views:
                   .icon {
                     color: #ffffff !important;
                   }
+              # Temperature Sensor (Kids Bedroom)
               - type: sensor
                 entity: sensor.kids_bedroom_mp_sensor_temperature_measurement
                 name: Kids Bedroom
@@ -313,6 +359,7 @@ views:
                   }
           - type: horizontal-stack
             cards:
+              # Temperature Sensor (Guest Bedroom)
               - type: sensor
                 entity: sensor.guest_bedroom_mp_sensor_temperature_measurement
                 name: Guest Bedroom
@@ -325,6 +372,7 @@ views:
                   .icon {
                     color: #ffffff !important;
                   }
+              # Temperature Sensor (Media Room)
               - type: sensor
                 entity: sensor.media_room_mp_sensor_temperature_measurement
                 name: Media Room
@@ -337,6 +385,7 @@ views:
                   .icon {
                     color: #ffffff !important;
                   }
+          # Chromecast (Media Room)
           - type: media-control
             entity: media_player.media_room_cc
           - type: entities
@@ -346,8 +395,10 @@ views:
                 font-weight: 500;
               }
             entities:
+              # Play:3 (Master Bedroom)
               - entity: media_player.master_bedroom
                 name: 'Play:3'
+              # Play:1 (Kids Bedroom)
               - entity: media_player.kids_bedroom
                 name: 'Play:1'
             show_header_toggle: false
@@ -362,100 +413,6 @@ views:
         name: Archana
     cards:
       - cards:
-          - type: horizontal-stack
-            cards:
-              - type: button
-                entity: binary_sensor.hallway_zone_2
-                icon_height: 32px
-                name: Hallway
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.hallway_zone_2', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.master_bedroom_zone_1
-                icon_height: 32px
-                name: Master Bedroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.master_bedroom_zone_1', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.wardrobe_motion_sensor_motion
-                icon_height: 32px
-                name: Wardrobe
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-          - type: horizontal-stack
-            cards:
-              - type: button
-                entity: binary_sensor.kids_bedroom_motion_sensor_motion
-                icon_height: 32px
-                name: Kids Bedroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kids_bedroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.kids_bathroom_motion_sensor_motion
-                icon_height: 32px
-                name: Kids Bathroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kids_bathroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.living_room_zone_3
-                icon_height: 32px
-                name: Living Room
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.living_room_zone_3', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
           - type: glance
             title: Porch
             entities:
@@ -473,7 +430,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -492,7 +449,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -517,7 +474,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -548,7 +505,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -567,7 +524,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -586,7 +543,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -596,13 +553,6 @@ views:
               }
         type: vertical-stack
       - cards:
-          - type: picture-glance
-            title: Garage
-            camera_image: camera.garage_camera
-            camera_view: live
-            entities: []
-            image: /local/wyze.png
-            aspect_ratio: 0%
           - type: glance
             title: Garage
             entities:
@@ -620,7 +570,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -643,15 +593,9 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
-              - entity: cover.51681463d8bfc0dc7869
-                name: Blinds
-                tap_action:
-                  action: toggle
-                hold_action:
-                  action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -676,7 +620,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -701,7 +645,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -726,7 +670,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -757,7 +701,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -796,7 +740,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -821,7 +765,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -846,7 +790,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -865,7 +809,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -884,7 +828,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -903,7 +847,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 3
+            columns: 4
             style: |
               .card-header {
                 font-weight: 500;
@@ -911,53 +855,6 @@ views:
               ha-card {
                 font-size: 14px !important;
               }
-          - type: horizontal-stack
-            cards:
-              - type: button
-                entity: binary_sensor.bathroom_wl_sensor_water
-                icon_height: 32px
-                name: Bathroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.bathroom_wl_sensor_water', 'on') %} rrgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.kids_bathroom_wl_sensor_water
-                icon_height: 32px
-                name: Kids Bathroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kids_bathroom_wl_sensor_water', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              - type: button
-                entity: binary_sensor.kitchen_wl_sensor_water
-                icon_height: 32px
-                name: Kitchen
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kitchen_wl_sensor_water', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
         type: vertical-stack
     icon: ''
     path: rooms
