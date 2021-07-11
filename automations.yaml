@@ -334,3 +334,26 @@
       entity_id:
         - switch.2805375584f3eb78a549_2
   mode: single
+
+- id: porch-motion-on-notification
+  alias: Notification - Porch MOTION ON
+  trigger:
+    platform: state
+    entity_id: binary_sensor.porch_motion_sensor_motion
+    to: 'on'
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id:
+          - media_player.master_bedroom
+          - media_player.kids_bedroom
+        media_content_id: http://192.168.86.5:8123/local/notification.mp3
+        media_content_type: music
+    - delay: '3'
+    - service: tts.google_translate_say
+      data:
+        entity_id:
+          - media_player.master_bedroom
+          - media_player.kids_bedroom
+        message: Someone is at the front door.
+  mode: single
