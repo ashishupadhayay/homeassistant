@@ -139,7 +139,7 @@
     switch.783504655002916432f4: off
     # Switch (Alfresco)
     switch.61308075ecfabc301587: off
-  icon: mdi:weather-night
+  icon: mdi:bed
 
 - id: lock
   name: Lock

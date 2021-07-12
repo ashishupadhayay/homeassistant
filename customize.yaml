@@ -176,7 +176,7 @@ sensor.media_room_mp_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.bathroom_wl_sensor_water:
   friendly_name: Bathroom Water Leak Sensor Status
-  icon: mdi:water-check
+  icon: mdi:water-alert
 sensor.bathroom_wl_sensor_temperature_measurement:
   friendly_name: Bathroom Water Leak Sensor Temperature
   icon: mdi:thermometer
@@ -185,7 +185,7 @@ sensor.bathroom_wl_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.kids_bathroom_wl_sensor_water:
   friendly_name: Kids Bathroom Water Leak Sensor Status
-  icon: mdi:water-check
+  icon: mdi:water-alert
 sensor.kids_bathroom_wl_sensor_temperature_measurement:
   friendly_name: Kids Bathroom Water Leak Sensor Temperature
   icon: mdi:thermometer
@@ -194,7 +194,7 @@ sensor.kids_bathroom_wl_sensor_battery:
   icon: mdi:battery-heart-variant
 binary_sensor.kitchen_wl_sensor_water:
   friendly_name: Kitchen Water Leak Sensor Status
-  icon: mdi:water-check
+  icon: mdi:water-alert
 sensor.kitchen_wl_sensor_temperature_measurement:
   friendly_name: Kitchen Water Leak Sensor Temperature
   icon: mdi:thermometer
@@ -218,7 +218,7 @@ sensor.robot_vacuum_robot_cleaner_turbo_mode:
   icon: mdi:run-fast
 scene.cleanup:
   friendly_name: Cleanup
-  icon: mdi:broom
+  icon: mdi:robot-vacuum-variant
 
 # Ring
 binary_sensor.ring_doorbell_motion:
@@ -309,7 +309,7 @@ scene.blackout:
   icon: mdi:lightbulb-group-off
 scene.night:
   friendly_name: Bed Time
-  icon: mdi:weather-night
+  icon: mdi:bed
 scene.lock:
   friendly_name: Lock
   icon: mdi:lock-outline
