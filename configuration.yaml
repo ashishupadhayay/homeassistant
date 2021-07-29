@@ -32,37 +32,7 @@ sensor:
       - memory_percent_used
       - volume_percentage_used
   - platform: google_wifi
-  - platform: sems
-    username: !secret sems_username
-    password: !secret sems_password
-    station_id : !secret sems_station_id
-    scan_interval: 60
-  - platform: template
-    sensors:
-      pv_outputpower:
-        value_template: '{{ states.sensor.sems_portal.attributes.outputpower }}'
-        unit_of_measurement: 'W'
-        friendly_name: 'Power Output'
-      pv_temperature:
-        value_template: '{{ states.sensor.sems_portal.attributes.tempperature }}'
-        unit_of_measurement: 'C'
-        friendly_name: 'Temperature'
-      pv_eday:
-        value_template: '{{ states.sensor.sems_portal.attributes.eday }}'
-        unit_of_measurement: 'kWh'
-        friendly_name: 'Energy (Today)'
-      pv_etotal:
-        value_template: '{{ states.sensor.sems_portal.attributes.etotal }}'
-        unit_of_measurement: 'kWh'
-        friendly_name: 'Energy (Total)'
-      pv_iday:
-        value_template: '{{ states.sensor.sems_portal.attributes.iday }}'
-        unit_of_measurement: '$'
-        friendly_name: 'Income (Today)'
-      pv_itotal:
-        value_template: '{{ states.sensor.sems_portal.attributes.itotal }}'
-        unit_of_measurement: '$'
-        friendly_name: 'Income (Total)'
+    host: 192.168.86.1
 
 # Device Tracker
 device_tracker:
@@ -86,11 +56,6 @@ ness_alarm:
       id: 2
     - name: Living Room (Zone 3)
       id: 3
-
-# Withings
-withings:
-  client_id: !secret withings_client_id
-  client_secret: !secret withings_client_secret
 
 group: !include groups.yaml
 automation: !include automations.yaml

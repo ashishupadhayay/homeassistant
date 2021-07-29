@@ -222,10 +222,10 @@ scene.cleanup:
 
 # Ring
 binary_sensor.ring_doorbell_motion:
-  friendly_name: Ring Video Doorbell Motion
+  friendly_name: Ring Doorbell Motion
   icon: mdi:motion-sensor
 sensor.ring_doorbell_battery:
-  friendly_name: Ring Video Doorbell Battery
+  friendly_name: Ring Doorbell Battery
   icon: mdi:battery-heart-variant
 
 # IKEA
@@ -277,11 +277,6 @@ media_player.master_bedroom:
 media_player.kids_bedroom:
   friendly_name: 'Play:1'
   icon: mdi:speaker
-
-# SEMS Portal
-sensor.pv_eday:
-  friendly_name: Solar
-  icon: mdi:white-balance-sunny
 
 # Dyson
 fan.pure_hot_cool_link:

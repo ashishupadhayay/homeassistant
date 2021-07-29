@@ -651,6 +651,12 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
+              - entity: cover.51681463d8bfc0dc7869
+                name: Blinds
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
             show_name: true
             show_state: false
             columns: 4

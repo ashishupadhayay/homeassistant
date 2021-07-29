@@ -51,8 +51,8 @@
 - id: sunrise
   alias: Routine - Sunrise
   trigger:
-    platform: sun
-    event: sunrise
+    platform: time
+    at: '07:00'
   action:
     - service: switch.turn_on
       data:
@@ -68,8 +68,8 @@
 - id: sunset
   alias: Routine - Sunset
   trigger:
-    platform: sun
-    event: sunset
+    platform: time
+    at: '19:00'
   action:
     - service: switch.turn_on
       data:
@@ -312,7 +312,7 @@
     to: 'on'
   condition:
     - condition: time
-      before: 06:00:00
+      before: '06:00:00'
       after: '18:00:00'
   action:
     service: switch.turn_on
@@ -341,6 +341,10 @@
     platform: state
     entity_id: binary_sensor.porch_motion_sensor_motion
     to: 'on'
+  condition:
+    - condition: time
+      before: '18:00:00'
+      after: '08:00:00'
   action:
     - service: media_player.play_media
       data:
