@@ -530,6 +530,12 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
+              - entity: fan.pure_hot_cool_link
+                name: Fan
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
             show_name: true
             show_state: false
             columns: 4
