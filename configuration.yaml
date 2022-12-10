@@ -9,6 +9,8 @@ tts:
 # Theme
 frontend:
   themes: !include themes.yaml
+  extra_module_url:
+    - /local/card-mod.js
   
 # Camera
 camera:
@@ -38,10 +40,10 @@ sensor:
 device_tracker:
   - platform: ping
     hosts:
-      ashish_pixel_3: 192.168.86.79
+      ashish_phone: 192.168.86.96
   - platform: ping
     hosts:
-      archana_pixel_3: 192.168.86.80
+      archana_phone: 192.168.86.97
 
 # NESS
 ness_alarm:
@@ -57,9 +59,7 @@ ness_alarm:
     - name: Living Room (Zone 3)
       id: 3
 
-group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
 scene: !include scenes.yaml
 
 homeassistant:

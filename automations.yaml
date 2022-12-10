@@ -57,11 +57,11 @@
     - service: switch.turn_on
       data:
         entity_id:
-          - switch.dishwasher
+          - switch.outlet_dishwasher
     - service: cover.open_cover
       data:
         entity_id:
-          - cover.51681463d8bfc0dc7869
+          - cover.aaron_bedroom_blinds_curtain
   mode: single
 
 # Sunset
@@ -74,12 +74,11 @@
     - service: switch.turn_on
       data:
         entity_id:
-          - switch.2805375584f3eb78a549_3
-          - switch.2805375584f3eb78a549_1
+          - switch.hallway_ts_3g_switch_1
     - service: cover.close_cover
       data:
         entity_id:
-          - cover.51681463d8bfc0dc7869
+          - cover.aaron_bedroom_blinds_curtain
   mode: single
 
 # Bedtime
@@ -109,9 +108,8 @@
     service: switch.turn_on
     data:
       entity_id:
-        - switch.2805375584f3eb78a549_1
+        - switch.hallway_ts_3g_switch_1
   mode: single
-
 - id: hallway-motion-off
   alias: Trigger - Hallway MOTION OFF
   trigger:
@@ -127,9 +125,8 @@
     service: switch.turn_off
     data:
       entity_id:
-        - switch.2805375584f3eb78a549_1
+        - switch.hallway_ts_3g_switch_1
   mode: single
-  
 # Wardrobe
 - id: wardrobe-motion-on
   alias: Trigger - Wardrobe MOTION ON
@@ -137,17 +134,16 @@
     platform: state
     entity_id: binary_sensor.wardrobe_motion_sensor_motion
     to: 'on'
-  condition:
-    - condition: time
-      before: 06:00:00
-      after: '21:00:00'
   action:
-    service: switch.turn_on
-    data:
-      entity_id:
-        - switch.613080753c71bf30c321
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.wardrobe_ts_1g_switch_1
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.wardrobe_rgb_ls
   mode: single
-  
 - id: wardrobe-motion-off
   alias: Trigger - Wardrobe MOTION OFF
   trigger:
@@ -156,44 +152,14 @@
     to: 'off'
     for: '00:05:00'
   action:
-    service: switch.turn_off
-    data:
-      entity_id:
-        - switch.613080753c71bf30c321
-  mode: single
-
-# Kids Bathroom
-- id: kids-bathroom-motion-on
-  alias: Trigger - Kids Bathroom MOTION ON
-  trigger:
-    platform: state
-    entity_id: binary_sensor.kids_bathroom_motion_sensor_motion
-    to: 'on'
-  condition:
-    - condition: time
-      before: 06:00:00
-      after: '21:00:00'
-  action:
-    service: switch.turn_on
-    data:
-      entity_id:
-        - switch.1745257568c63aeea6d7_2
-        - switch.17452575500291642e2b_1
-  mode: single
-
-- id: kids-bathroom-motion-off
-  alias: Trigger - Kids Bathroom MOTION OFF
-  trigger:
-    platform: state
-    entity_id: binary_sensor.kids_bathroom_motion_sensor_motion
-    to: 'off'
-    for: '00:10:00'
-  action:
-    service: switch.turn_off
-    data:
-      entity_id:
-        - switch.1745257568c63aeea6d7_2
-        - switch.17452575500291642e2b_1
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.wardrobe_ts_1g_switch_1
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.wardrobe_rgb_ls
   mode: single
 
 # Living Room
@@ -211,9 +177,10 @@
     service: switch.turn_on
     data:
       entity_id:
-        - switch.2805375584f3eb78abc5_1
-        - switch.2805375584f3eb78abc5_2
-        - switch.2805375584f3eb78abc5_3
+        - switch.living_room_ts_3g_1_switch_1
+        - switch.living_room_ts_3g_1_switch_2
+        - switch.living_room_ts_3g_1_switch_3
+        - switch.pantry_ts_1g_switch_1
   mode: single
 
 - id: living-room-motion-off
@@ -227,36 +194,10 @@
     service: switch.turn_off
     data:
       entity_id:
-        - switch.2805375584f3eb78abc5_1
-        - switch.2805375584f3eb78abc5_2
-        - switch.2805375584f3eb78abc5_3
-  mode: single
-
-# Garage Door
-- id: garage-door-open
-  alias: Trigger - Garage Door OPEN
-  trigger:
-    platform: state
-    entity_id: binary_sensor.garage_mp_sensor_contact
-    to: 'on'
-  action:
-    service: switch.turn_on
-    data:
-      entity_id:
-        - switch.61308075ecfabc308206
-  mode: single
-
-- id: garage-door-close
-  alias: Trigger - Garage Door CLOSE
-  trigger:
-    platform: state
-    entity_id: binary_sensor.garage_mp_sensor_contact
-    to: 'off'
-  action:
-    service: switch.turn_off
-    data:
-      entity_id:
-        - switch.61308075ecfabc308206
+        - switch.living_room_ts_3g_1_switch_1
+        - switch.living_room_ts_3g_1_switch_2
+        - switch.living_room_ts_3g_1_switch_3
+        - switch.pantry_ts_1g_switch_1
   mode: single
 
 # Button
@@ -266,12 +207,12 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: d45847a9-26f1-4da4-8ef7-82c84700bd23
+      device_id: d37cd705-87ec-476f-a30b-4d3d1c334e9e
       value: pushed
   action:
-    service: light.turn_on
+    service: scene.turn_on
     data:
-      entity_id: light.master_bedroom_lamp
+      entity_id: scene.lock
   mode: single
 
 - id: kbb-double
@@ -280,12 +221,12 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: d45847a9-26f1-4da4-8ef7-82c84700bd23
+      device_id: d37cd705-87ec-476f-a30b-4d3d1c334e9e
       value: double
   action:
-    service: light.turn_off
+    service: scene.turn_on
     data:
-      entity_id: light.master_bedroom_lamp
+      entity_id: scene.night
   mode: single
 
 - id: kbb-held
@@ -300,7 +241,7 @@
     service: scene.turn_on
     data:
       entity_id:
-        - scene.night
+        - scene.blackout
   mode: single
 
 # Porch
@@ -318,7 +259,7 @@
     service: switch.turn_on
     data:
       entity_id:
-        - switch.2805375584f3eb78a549_2
+        - switch.hallway_ts_3g_switch_1
   mode: single
 
 - id: porch-motion-off
@@ -332,7 +273,7 @@
     service: switch.turn_off
     data:
       entity_id:
-        - switch.2805375584f3eb78a549_2
+        - switch.hallway_ts_3g_switch_1
   mode: single
 
 - id: porch-motion-on-notification
@@ -343,21 +284,21 @@
     to: 'on'
   condition:
     - condition: time
-      before: '18:00:00'
+      before: '20:00:00'
       after: '08:00:00'
   action:
     - service: media_player.play_media
       data:
         entity_id:
-          - media_player.master_bedroom
-          - media_player.kids_bedroom
+          - media_player.master_bedroom_gnh
+          - media_player.living_room_gnm
         media_content_id: http://192.168.86.5:8123/local/notification.mp3
         media_content_type: music
     - delay: '3'
     - service: tts.google_translate_say
       data:
         entity_id:
-          - media_player.master_bedroom
-          - media_player.kids_bedroom
+          - media_player.master_bedroom_gnh
+          - media_player.living_room_gnm
         message: Someone is at the front door.
   mode: single

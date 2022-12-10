@@ -5,100 +5,126 @@ person.archana_maharjan:
   entity_picture: /local/archana.png
 
 # Tuya Switch
-switch.2805375584f3eb78a549_1:
+# Hallway
+switch.hallway_ts_3g_switch_1:
   friendly_name: Hallway Light
   icon: mdi:lightbulb
-switch.2805375584f3eb78a549_2:
+switch.hallway_ts_3g_switch_2:
   friendly_name: Porch Light
   icon: mdi:lightbulb
-switch.2805375584f3eb78a549_3:
+switch.hallway_ts_3g_switch_3:
   friendly_name: Porch Accent Light
   icon: mdi:track-light
-switch.61308075ecfabc3082f8:
+# Master Bedroom
+switch.master_bedroom_ts_1g_switch_1:
   friendly_name: Master Bedroom Light
   icon: mdi:lightbulb
-switch.28053755bcddc2219b59_1:
+# Bathroom
+switch.bathroom_ts_3g_switch_1:
   friendly_name: Bathroom Light
   icon: mdi:lightbulb
-switch.28053755bcddc2219b59_2:
+switch.bathroom_ts_3g_switch_2:
   friendly_name: Bathroom Downlight
   icon: mdi:lightbulb
-switch.28053755bcddc2219b59_3:
+switch.bathroom_ts_3g_switch_3:
   friendly_name: Bathroom Exhaust
   icon: mdi:fan
-switch.613080753c71bf30c177:
+# Toilet
+switch.toilet_ts_1g_switch_1:
   friendly_name: Toilet Light
   icon: mdi:lightbulb
-switch.613080753c71bf30c321:
+# Wardrobe
+switch.wardrobe_ts_1g_switch_1:
   friendly_name: Wardrobe Light
   icon: mdi:lightbulb
-switch.61308075ecfabc308206:
+# Garage
+switch.garage_ts_1g_switch_1:
   friendly_name: Garage Light
   icon: mdi:lightbulb
-switch.61308075ecfabc3083f8:
-  friendly_name: Kids Bedroom Light
+# Aaron Bedroom
+switch.aaron_bedroom_ts_1g_switch_1:
+  friendly_name: Aaron Bedroom Light
   icon: mdi:lightbulb
-switch.1745257568c63aeea6d7_1:
+# Ava Bedroom
+switch.ava_bedroom_ts_1g_switch_1:
+  friendly_name: Ava Bedroom Light
+  icon: mdi:lightbulb
+# Kids Bathroom
+switch.kids_bathroom_ts_2g_switch_1:
   friendly_name: Kids Bathroom Light
   icon: mdi:lightbulb
-switch.1745257568c63aeea6d7_2:
+switch.kids_bathroom_ts_2g_switch_2:
   friendly_name: Kids Bathroom Downlight
   icon: mdi:lightbulb
-switch.17452575500291642e2b_1:
+# Kids Toilet
+switch.kids_toilet_ts_2g_switch_1:
   friendly_name: Kids Toilet Light
   icon: mdi:lightbulb
-switch.17452575500291642e2b_2:
+switch.kids_toilet_ts_2g_switch_2:
   friendly_name: Kids Toilet Exhaust
   icon: mdi:fan
-switch.7835046550029164312a:
+# Laundry
+switch.laundry_ts_1g_switch_1:
   friendly_name: Laundry Light
   icon: mdi:lightbulb
-switch.61308075ecfabc30872d:
-  friendly_name: Guest Bedroom Light
+# Office
+switch.office_ts_1g_switch_1:
+  friendly_name: Office Light
   icon: mdi:lightbulb
-switch.61308075ecfabc2ffaa0:
-  friendly_name: Media Room Light
-  icon: mdi:lightbulb
-switch.2805375584f3eb78abc5_1:
+# Living Room
+switch.living_room_ts_3g_1_switch_1:
   friendly_name: Living Room Light
   icon: mdi:lightbulb
-switch.2805375584f3eb78abc5_2:
+switch.living_room_ts_3g_1_switch_2:
   friendly_name: Kitchen Light
   icon: mdi:lightbulb
-switch.2805375584f3eb78abc5_3:
+switch.living_room_ts_3g_1_switch_3:
   friendly_name: Dining Light
   icon: mdi:lightbulb
-switch.783504655002916432f4:
-  friendly_name: Pantry Light
-  icon: mdi:lightbulb
-switch.61308075ecfabc301587:
+switch.living_room_ts_3g_2_switch_1:
   friendly_name: Alfresco Light
+  icon: mdi:lightbulb
+switch.living_room_ts_3g_2_switch_2:
+  friendly_name: Kitchen Pendant Light
+  icon: mdi:vanity-light
+switch.pantry_ts_1g_switch_1:
+  friendly_name: Pantry Light
   icon: mdi:lightbulb
 
 # Tuya Lightstrip
-light.20363802d8bfc00c2df5:
-  friendly_name: Kids Bedroom RGB Lightstrip
+# Master Bedroom
+light.master_bedroom_rgb_ls:
+  friendly_name: Master Bedroom RGB Lightstrip
   icon: mdi:led-strip-variant
-light.20363802d8bfc00c2851:
-  friendly_name: Guest Bedroom RGB Lightstrip
+light.wardrobe_rgb_ls:
+  friendly_name: Wardrobe RGB Lightstrip
+  icon: mdi:led-strip-variant
+light.aaron_bedroom_rgb_ls:
+  friendly_name: Aaron Bedroom RGB Lightstrip
+  icon: mdi:led-strip-variant
+light.ava_bedroom_rgb_ls:
+  friendly_name: Ava Bedroom RGB Lightstrip
+  icon: mdi:led-strip-variant
+light.kitchen_rgb_ls:
+  friendly_name: Kitchen RGB Lightstrip
   icon: mdi:led-strip-variant
   
 # Tuya Blinds
-cover.51681463d8bfc0dc7869:
-  friendly_name: Kids Bedroom Blinds
+cover.aaron_bedroom_blinds_curtain:
+  friendly_name: Aaron Bedroom Blinds
   icon: mdi:blinds
 
 # Hue
 light.master_bedroom_lamp:
   friendly_name: Master Bedroom Table Lamp
   icon: mdi:lamp
-light.guest_bedroom_lamp:
+light.ava_bedroom_lamp:
   friendly_name: Guest Bedroom Table Lamp
   icon: mdi:lamp
-light.media_room_lightstrip:
+light.office_lightstrip:
   friendly_name: Media Room RGB Lightstrip
   icon: mdi:led-strip-variant
-light.living_room_lamp:
+light.living_room_floor_lamp:
   friendly_name: Living Room Floor Lamp
   icon: mdi:floor-lamp
 
@@ -106,20 +132,21 @@ light.living_room_lamp:
 cover.garage_door:
   friendly_name: Garage Door
   icon: mdi:garage
-switch.washing_machine:
+switch.outlet_washing_machine:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
-switch.av_receiver:
+switch.outlet_av_receiver:
   friendly_name: AV Receiver
   icon: mdi:amplifier
-switch.projector:
+switch.outlet_projector:
   friendly_name: Projector
   icon: mdi:projector
-switch.dishwasher:
+switch.outlet_dishwasher:
   friendly_name: Dishwasher
   icon: mdi:dishwasher
 
 # Samsung/Smartthings
+# Multi Purpose Sensor
 binary_sensor.front_door_mp_sensor_contact:
   friendly_name: Front Door Multi Purpose Sensor Contact
   icon: mdi:door
@@ -147,33 +174,34 @@ sensor.garage_mp_sensor_temperature_measurement:
 sensor.garage_mp_sensor_battery:
   friendly_name: Garage Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
-binary_sensor.kids_bedroom_mp_sensor_contact:
-  friendly_name: Kids Bedroom Multi Purpose Sensor Contact
+binary_sensor.aaron_bedroom_mp_sensor_contact:
+  friendly_name: Aaron Bedroom Multi Purpose Sensor Contact
   icon: mdi:door
-sensor.kids_bedroom_mp_sensor_temperature_measurement:
-  friendly_name: Kids Bedroom Multi Purpose Sensor Temperature
+sensor.aaron_bedroom_mp_sensor_temperature_measurement:
+  friendly_name: Aaron Bedroom Multi Purpose Sensor Temperature
   icon: mdi:thermometer
-sensor.kids_bedroom_mp_sensor_battery:
-  friendly_name: Kids Bedroom Multi Purpose Sensor Battery
+sensor.aaron_bedroom_mp_sensor_battery:
+  friendly_name: Aaron Bedroom Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
-binary_sensor.guest_bedroom_mp_sensor_contact:
-  friendly_name: Guest Bedroom Multi Purpose Sensor Contact
+binary_sensor.ava_bedroom_mp_sensor_contact:
+  friendly_name: Ava Bedroom Multi Purpose Sensor Contact
   icon: mdi:door
-sensor.guest_bedroom_mp_sensor_temperature_measurement:
-  friendly_name: Guest Bedroom Multi Purpose Sensor Temperature
+sensor.ava_bedroom_mp_sensor_temperature_measurement:
+  friendly_name: Ava Bedroom Multi Purpose Sensor Temperature
   icon: mdi:thermometer
-sensor.guest_bedroom_mp_sensor_battery:
-  friendly_name: Guest Bedroom Multi Purpose Sensor Battery
+sensor.ava_bedroom_mp_sensor_battery:
+  friendly_name: Ava Bedroom Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
-binary_sensor.media_room_mp_sensor_contact:
-  friendly_name: Media Room Multi Purpose Sensor Contact
+binary_sensor.office_mp_sensor_contact:
+  friendly_name: Office Multi Purpose Sensor Contact
   icon: mdi:door
-sensor.media_room_mp_sensor_temperature_measurement:
-  friendly_name: Media Room Multi Purpose Sensor Temperature
+sensor.office_mp_sensor_temperature_measurement:
+  friendly_name: Office Multi Purpose Sensor Temperature
   icon: mdi:thermometer
-sensor.media_room_mp_sensor_battery:
-  friendly_name: Media Room Multi Purpose Sensor Battery
+sensor.office_mp_sensor_battery:
+  friendly_name: Office Multi Purpose Sensor Battery
   icon: mdi:battery-heart-variant
+# Water Leak Sensor
 binary_sensor.bathroom_wl_sensor_water:
   friendly_name: Bathroom Water Leak Sensor Status
   icon: mdi:water-alert
@@ -201,18 +229,21 @@ sensor.kitchen_wl_sensor_temperature_measurement:
 sensor.kitchen_wl_sensor_battery:
   friendly_name: Kitchen Water Leak Sensor Battery
   icon: mdi:battery-heart-variant
+# Button
 sensor.button_temperature_measurement:
   friendly_name: Button Temperature
   icon: mdi:thermometer
 sensor.button_battery:
   friendly_name: Button Battery
   icon: mdi:battery-heart-variant
+# TV
 switch.tv_samsung_6_series_60:
   friendly_name: Living Room TV
   icon: mdi:television-classic
 sensor.robot_vacuum_robot_cleaner_movement:
   friendly_name: Status
   icon: mdi:information
+# Robot Vacuum
 sensor.robot_vacuum_robot_cleaner_turbo_mode:
   friendly_name: Turbo Mode
   icon: mdi:run-fast
@@ -241,18 +272,6 @@ binary_sensor.wardrobe_motion_sensor_motion:
 sensor.wardrobe_motion_sensor_battery:
   friendly_name: Wardrobe Motion Sensor Battery
   icon: mdi:battery-heart-variant
-binary_sensor.kids_bedroom_motion_sensor_motion:
-  friendly_name: Kids Bedroom Motion
-  icon: mdi:motion-sensor
-sensor.kids_bedroom_motion_sensor_battery:
-  friendly_name: Kids Bedroom Motion Sensor Battery
-  icon: mdi:battery-heart-variant
-binary_sensor.kids_bathroom_motion_sensor_motion:
-  friendly_name: Kids Bathroom Motion
-  icon: mdi:motion-sensor
-sensor.kids_bathroom_motion_sensor_battery:
-  friendly_name: Kids Bathroom Motion Sensor Battery
-  icon: mdi:battery-heart-variant
 
 # NESS
 binary_sensor.master_bedroom_zone_1:
@@ -274,8 +293,13 @@ sensor.google_wifi_status:
 media_player.master_bedroom:
   friendly_name: 'Play:3'
   icon: mdi:speaker
-media_player.kids_bedroom:
+media_player.ava_bedroom:
   friendly_name: 'Play:1'
+  icon: mdi:speaker
+
+# Marantz
+media_player.marantz_sr6008:
+  friendly_name: 'Marantz SR6000'
   icon: mdi:speaker
 
 # Dyson
@@ -289,13 +313,13 @@ sensor.speedtest_download:
   icon: mdi:earth
 
 # Ashish Pixel 3
-device_tracker.ashish_pixel_3:
-  friendly_name: Ashish Pixel 3
+device_tracker.ashish_phone:
+  friendly_name: Ashish Phone
   icon: mdi:cellphone-android
   
 # Archana Pixel 3
-device_tracker.archana_pixel_3:
-  friendly_name: Archana Pixel 3
+device_tracker.archana_phone:
+  friendly_name: Archana Phone
   icon: mdi:cellphone-android
 
 # Home Assistant

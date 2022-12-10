@@ -9,7 +9,7 @@ views:
       - cards:
           # Weather
           - type: weather-forecast
-            entity: weather.67nav
+            entity: weather.forecast_67nav
             secondary_info_attribute: humidity
           - type: horizontal-stack
             cards:
@@ -131,99 +131,93 @@ views:
                   font-size: 14px !important;
                 }
             entities:
-              # Switch (Porch)
-              - entity: switch.2805375584f3eb78a549_2
+              # Porch
+              - entity: switch.hallway_ts_3g_switch_2
                 state_color: true
-              - entity: switch.2805375584f3eb78a549_3
+              - entity: switch.hallway_ts_3g_switch_3
                 state_color: true
-              # Switch (Hallway)
-              - entity: switch.2805375584f3eb78a549_1
+              # Hallway
+              - entity: switch.hallway_ts_3g_switch_1
                 state_color: true
-              # Switch (Master Bedroom)
-              - entity: switch.61308075ecfabc3082f8
+              # Master Bedroom
+              - entity: switch.master_bedroom_ts_1g_switch_1
                 state_color: true
-              # Light (Master Bedroom)
               - entity: light.master_bedroom_lamp
-              # Fan (Master Bedroom)
+              - entity: light.master_bedroom_rgb_ls
+                state_color: true
               - entity: fan.pure_hot_cool_link
                 state_color: true
-              # Switch (Bathroom)
-              - entity: switch.28053755bcddc2219b59_1
+              # Bathroom
+              - entity: switch.bathroom_ts_3g_switch_1
                 state_color: true
-              - entity: switch.28053755bcddc2219b59_2
+              - entity: switch.bathroom_ts_3g_switch_2
                 state_color: true
-              - entity: switch.28053755bcddc2219b59_3
+              - entity: switch.bathroom_ts_3g_switch_3
                 state_color: true
-              # Switch (Toilet)
-              - entity: switch.613080753c71bf30c177
+              # Toilet
+              - entity: switch.toilet_ts_1g_switch_1
                 state_color: true
-              # Switch (Wardrobe)
-              - entity: switch.613080753c71bf30c321
+              # Wardrobe
+              - entity: switch.wardrobe_ts_1g_switch_1
                 state_color: true
-              # Switch (Garage)
-              - entity: switch.61308075ecfabc308206
+              - entity: light.wardrobe_rgb_ls
+              # Garage
+              - entity: switch.garage_ts_1g_switch_1
                 state_color: true
-              # Switch (Kids Bedroom)
-              - entity: switch.61308075ecfabc3083f8
+              # Aaron Bedroom
+              - entity: switch.aaron_bedroom_ts_1g_switch_1
                 state_color: true
-              # RGB Lightstrip (Kids Bedroom)
-              - entity: light.20363802d8bfc00c2df5
-              # Switch (Kids Bathroom)
-              - entity: switch.1745257568c63aeea6d7_1
+              - entity: light.aaron_bedroom_rgb_ls
+              # Ava Bedroom
+              - entity: switch.ava_bedroom_ts_1g_switch_1
                 state_color: true
-              - entity: switch.1745257568c63aeea6d7_2
+              - entity: light.ava_bedroom_lamp
+              - entity: light.ava_bedroom_rgb_ls
+              # Kids Bathroom
+              - entity: switch.kids_bathroom_ts_2g_switch_1
                 state_color: true
-              # Switch (Kids Toilet)
-              - entity: switch.17452575500291642e2b_1
+              - entity: switch.kids_bathroom_ts_2g_switch_2
                 state_color: true
-              - entity: switch.17452575500291642e2b_2
+              # Kids Toilet
+              - entity: switch.kids_toilet_ts_2g_switch_1
                 state_color: true
-              # Switch (Laundry)
-              - entity: switch.7835046550029164312a
+              - entity: switch.kids_toilet_ts_2g_switch_2
                 state_color: true
-              # Washing Machine Outlet (Laundry)
-              - entity: switch.washing_machine
+              # Laundry
+              - entity: switch.laundry_ts_1g_switch_1
                 state_color: true
-              # Switch (Guest Bedroom)
-              - entity: switch.61308075ecfabc30872d
+              - entity: switch.outlet_washing_machine
                 state_color: true
-              # Light (Guest Bedroom)
-              - entity: light.guest_bedroom_lamp
-              # RGB Lightstrip (Guest Bedroom)
-              - entity: light.20363802d8bfc00c2851
-              # Switch (Media Room)
-              - entity: switch.61308075ecfabc2ffaa0
+              # Office
+              - entity: switch.office_ts_1g_switch_1
                 state_color: true
-              # RGB Lightstrip (Media Room)
-              - entity: light.media_room_lightstrip
-              # AV Receiver Outlet (Media Room)
-              - entity: switch.av_receiver
+              - entity: light.office_lightstrip
+              - entity: switch.outlet_av_receiver
                 state_color: true
-              # Projector Outlet (Media Room)
-              - entity: switch.projector
+              - entity: switch.outlet_projector
                 state_color: true
-              # Switch (Living Room)
-              - entity: switch.2805375584f3eb78abc5_1
+              # Living Room
+              - entity: switch.living_room_ts_3g_1_switch_1
                 state_color: true
-              # Light (Living Room)
-              - entity: light.living_room_lamp
-              # TV (Living Room)
+              - entity: light.living_room_floor_lamp
               - entity: switch.tv_samsung_6_series_60
                 state_color: true
-              # Switch (Kitchen)
-              - entity: switch.2805375584f3eb78abc5_2
+              # Kitchen
+              - entity: switch.living_room_ts_3g_1_switch_2
                 state_color: true
-              # Dishwasher Outlet (Kitchen)
-              - entity: switch.dishwasher
+              - entity: switch.living_room_ts_3g_2_switch_2
                 state_color: true
-              # Switch (Dining)
-              - entity: switch.2805375584f3eb78abc5_3
+              - entity: light.kitchen_rgb_ls
+              - entity: switch.outlet_dishwasher
                 state_color: true
-              # Switch (Pantry)
-              - entity: switch.783504655002916432f4
+              # Dining
+              - entity: switch.living_room_ts_3g_1_switch_3
                 state_color: true
-              # Switch (Alfresco)
-              - entity: switch.61308075ecfabc301587
+              # Pantry
+              - entity: switch.pantry_ts_1g_switch_1
+                state_color: true
+              # Alfresco  
+              - entity: switch.living_room_ts_3g_2_switch_1
                 state_color: true
             show_empty: false
             state_filter:
@@ -277,56 +271,6 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-              # Motion Sensor (Wardrobe)
-              - type: button
-                entity: binary_sensor.wardrobe_motion_sensor_motion
-                icon_height: 32px
-                name: Wardrobe
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-          - type: horizontal-stack
-            cards:
-              # Motion Sensor (Kids Bedroom)
-              - type: button
-                entity: binary_sensor.kids_bedroom_motion_sensor_motion
-                icon_height: 32px
-                name: Kids Bedroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kids_bedroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
-              # Motion Sensor (Kids Bathroom)
-              - type: button
-                entity: binary_sensor.kids_bathroom_motion_sensor_motion
-                icon_height: 32px
-                name: Kids Bathroom
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.kids_bathroom_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
               # Motion Sensor (Living Room)
               - type: button
                 entity: binary_sensor.living_room_zone_3
@@ -340,6 +284,22 @@ views:
                 style: |
                   ha-card {
                     background: {% if is_state('binary_sensor.living_room_zone_3', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
+                    font-size: 14px !important;
+                    padding: 30px 5px !important;
+                  }
+              # Motion Sensor (Wardrobe)
+              - type: button
+                entity: binary_sensor.wardrobe_motion_sensor_motion
+                icon_height: 32px
+                name: Wardrobe
+                show_state: false
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: none
+                style: |
+                  ha-card {
+                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
@@ -402,10 +362,10 @@ views:
                   .icon {
                     color: #ffffff !important;
                   }
-              # Temperature Sensor (Kids Bedroom)
+              # Temperature Sensor (Aaron Bedroom)
               - type: sensor
-                entity: sensor.kids_bedroom_mp_sensor_temperature_measurement
-                name: Kids Bedroom
+                entity: sensor.aaron_bedroom_mp_sensor_temperature_measurement
+                name: Aaron Bedroom
                 graph: line
                 style: |
                   .name {
@@ -417,10 +377,10 @@ views:
                   }
           - type: horizontal-stack
             cards:
-              # Temperature Sensor (Guest Bedroom)
+              # Temperature Sensor (Ava Bedroom)
               - type: sensor
-                entity: sensor.guest_bedroom_mp_sensor_temperature_measurement
-                name: Guest Bedroom
+                entity: sensor.ava_bedroom_mp_sensor_temperature_measurement
+                name: Ava Bedroom
                 graph: line
                 style: |
                   .name {
@@ -430,10 +390,10 @@ views:
                   .icon {
                     color: #ffffff !important;
                   }
-              # Temperature Sensor (Media Room)
+              # Temperature Sensor (Office)
               - type: sensor
-                entity: sensor.media_room_mp_sensor_temperature_measurement
-                name: Media Room
+                entity: sensor.office_mp_sensor_temperature_measurement
+                name: Office
                 graph: line
                 style: |
                   .name {
@@ -445,7 +405,7 @@ views:
                   }
           # Chromecast (Media Room)
           - type: media-control
-            entity: media_player.media_room_cc
+            entity: media_player.office_tv
           - type: entities
             title: SONOS
             style: |
@@ -474,13 +434,13 @@ views:
           - type: glance
             title: Porch
             entities:
-              - entity: switch.2805375584f3eb78a549_2
+              - entity: switch.hallway_ts_3g_switch_2
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.2805375584f3eb78a549_3
+              - entity: switch.hallway_ts_3g_switch_3
                 name: Accent Light
                 tap_action:
                   action: toggle
@@ -499,7 +459,7 @@ views:
           - type: glance
             title: Hallway
             entities:
-              - entity: switch.2805375584f3eb78a549_1
+              - entity: switch.hallway_ts_3g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -518,7 +478,7 @@ views:
           - type: glance
             title: Master Bedroom
             entities:
-              - entity: switch.61308075ecfabc3082f8
+              - entity: switch.master_bedroom_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -526,6 +486,12 @@ views:
                   action: none
               - entity: light.master_bedroom_lamp
                 name: Table Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: light.master_bedroom_rgb_ls
+                name: RGB Lightstrip
                 tap_action:
                   action: toggle
                 hold_action:
@@ -549,19 +515,19 @@ views:
           - type: glance
             title: Bathroom
             entities:
-              - entity: switch.28053755bcddc2219b59_1
+              - entity: switch.bathroom_ts_3g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.28053755bcddc2219b59_2
+              - entity: switch.bathroom_ts_3g_switch_2
                 name: Downlight
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.28053755bcddc2219b59_3
+              - entity: switch.bathroom_ts_3g_switch_3
                 name: Exhaust
                 tap_action:
                   action: toggle
@@ -580,7 +546,7 @@ views:
           - type: glance
             title: Toilet
             entities:
-              - entity: switch.613080753c71bf30c177
+              - entity: switch.toilet_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -599,12 +565,18 @@ views:
           - type: glance
             title: Wardrobe
             entities:
-              - entity: switch.613080753c71bf30c321
+              - entity: switch.wardrobe_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
+              - entity: light.wardrobe_rgb_ls
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
             show_name: true
             show_state: false
             columns: 4
@@ -620,7 +592,7 @@ views:
           - type: glance
             title: Garage
             entities:
-              - entity: switch.61308075ecfabc308206
+              - entity: switch.garage_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -643,21 +615,21 @@ views:
                 font-size: 14px !important;
               }
           - type: glance
-            title: Kids Bedroom
+            title: Aaron Bedroom
             entities:
-              - entity: switch.61308075ecfabc3083f8
+              - entity: switch.aaron_bedroom_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: light.20363802d8bfc00c2df5
+              - entity: light.aaron_bedroom_rgb_ls
                 name: RGB Lightstrip
                 tap_action:
                   action: toggle
                 hold_action:
                   action: more-info
-              - entity: cover.51681463d8bfc0dc7869
+              - entity: cover.aaron_bedroom_blinds_curtain
                 name: Blinds
                 tap_action:
                   action: more-info
@@ -674,15 +646,46 @@ views:
                 font-size: 14px !important;
               }
           - type: glance
-            title: Kids Bathroom
+            title: Ava Bedroom
             entities:
-              - entity: switch.1745257568c63aeea6d7_1
+              - entity: switch.ava_bedroom_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.1745257568c63aeea6d7_2
+              - entity: light.ava_bedroom_lamp
+                name: Table Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: light.ava_bedroom_rgb_ls
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+            show_name: true
+            show_state: false
+            columns: 4
+            style: |
+              .card-header {
+                font-weight: 500;
+              }
+              ha-card {
+                font-size: 14px !important;
+              }
+          - type: glance
+            title: Kids Bathroom
+            entities:
+              - entity: switch.kids_bathroom_ts_2g_switch_1
+                name: Light
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: switch.kids_bathroom_ts_2g_switch_2
                 name: Downlight
                 tap_action:
                   action: toggle
@@ -701,13 +704,13 @@ views:
           - type: glance
             title: Kids Toilet
             entities:
-              - entity: switch.17452575500291642e2b_1
+              - entity: switch.kids_toilet_ts_2g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.17452575500291642e2b_2
+              - entity: switch.kids_toilet_ts_2g_switch_2
                 name: Exhaust
                 tap_action:
                   action: toggle
@@ -726,13 +729,13 @@ views:
           - type: glance
             title: Laundry
             entities:
-              - entity: switch.7835046550029164312a
+              - entity: switch.laundry_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.washing_machine
+              - entity: switch.outlet_washing_machine
                 name: Washing Machine
                 tap_action:
                   action: toggle
@@ -748,61 +751,30 @@ views:
               ha-card {
                 font-size: 14px !important;
               }
-          - type: glance
-            title: Guest Bedroom
-            entities:
-              - entity: switch.61308075ecfabc30872d
-                name: Light
-                tap_action:
-                  action: toggle
-                hold_action:
-                  action: none
-              - entity: light.guest_bedroom_lamp
-                name: Table Lamp
-                tap_action:
-                  action: toggle
-                hold_action:
-                  action: more-info
-              - entity: light.20363802d8bfc00c2851
-                name: RGB Lightstrip
-                tap_action:
-                  action: toggle
-                hold_action:
-                  action: more-info
-            show_name: true
-            show_state: false
-            columns: 4
-            style: |
-              .card-header {
-                font-weight: 500;
-              }
-              ha-card {
-                font-size: 14px !important;
-              }
         type: vertical-stack
       - cards:
           - type: glance
-            title: Media Room
+            title: Office
             entities:
-              - entity: switch.61308075ecfabc2ffaa0
+              - entity: switch.office_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: light.media_room_lightstrip
+              - entity: light.office_lightstrip
                 name: RGB Lightstrip
                 tap_action:
                   action: toggle
                 hold_action:
                   action: more-info
-              - entity: switch.av_receiver
+              - entity: switch.outlet_av_receiver
                 name: AV Receiver
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.projector
+              - entity: switch.outlet_projector
                 name: Projector
                 tap_action:
                   action: toggle
@@ -821,13 +793,13 @@ views:
           - type: glance
             title: Living Room
             entities:
-              - entity: switch.2805375584f3eb78abc5_1
+              - entity: switch.living_room_ts_3g_1_switch_1
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: light.living_room_lamp
+              - entity: light.living_room_floor_lamp
                 name: Floor Lamp
                 tap_action:
                   action: toggle
@@ -846,13 +818,25 @@ views:
           - type: glance
             title: Kitchen
             entities:
-              - entity: switch.2805375584f3eb78abc5_2
+              - entity: switch.living_room_ts_3g_1_switch_2
                 name: Light
                 tap_action:
                   action: toggle
                 hold_action:
                   action: none
-              - entity: switch.dishwasher
+              - entity: switch.living_room_ts_3g_2_switch_2
+                name: Pendant
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: none
+              - entity: light.kitchen_rgb_ls
+                name: RGB Lightstrip
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
+              - entity: switch.outlet_dishwasher
                 name: Dishwasher
                 tap_action:
                   action: toggle
@@ -871,7 +855,7 @@ views:
           - type: glance
             title: Dining
             entities:
-              - entity: switch.2805375584f3eb78abc5_3
+              - entity: switch.living_room_ts_3g_1_switch_3
                 name: Light
                 tap_action:
                   action: toggle
@@ -890,7 +874,7 @@ views:
           - type: glance
             title: Pantry
             entities:
-              - entity: switch.783504655002916432f4
+              - entity: switch.pantry_ts_1g_switch_1
                 name: Light
                 tap_action:
                   action: toggle
@@ -909,7 +893,7 @@ views:
           - type: glance
             title: Alfresco
             entities:
-              - entity: switch.61308075ecfabc301587
+              - entity: switch.living_room_ts_3g_2_switch_1
                 name: Light
                 tap_action:
                   action: toggle
