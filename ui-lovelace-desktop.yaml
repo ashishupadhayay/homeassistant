@@ -144,7 +144,7 @@ views:
                 state_color: true
               - entity: light.master_bedroom_lamp
               - entity: light.master_bedroom_rgb_ls
-                state_color: true
+              - entity: light.rgb_globe_01
               - entity: fan.pure_hot_cool_link
                 state_color: true
               # Bathroom
@@ -168,6 +168,7 @@ views:
               - entity: switch.aaron_bedroom_ts_1g_switch_1
                 state_color: true
               - entity: light.aaron_bedroom_rgb_ls
+              - entity: light.rgb_globe_02
               # Ava Bedroom
               - entity: switch.ava_bedroom_ts_1g_switch_1
                 state_color: true
@@ -287,22 +288,6 @@ views:
                     font-size: 14px !important;
                     padding: 30px 5px !important;
                   }
-              # Motion Sensor (Wardrobe)
-              - type: button
-                entity: binary_sensor.wardrobe_motion_sensor_motion
-                icon_height: 32px
-                name: Wardrobe
-                show_state: false
-                tap_action:
-                  action: more-info
-                hold_action:
-                  action: none
-                style: |
-                  ha-card {
-                    background: {% if is_state('binary_sensor.wardrobe_motion_sensor_motion', 'on') %} rgba(211, 47, 47, 0.8) {% endif %};
-                    font-size: 14px !important;
-                    padding: 30px 5px !important;
-                  }
           # Speedtest
           - type: sensor
             entity: sensor.speedtest_download
@@ -416,8 +401,8 @@ views:
               # Play:3 (Master Bedroom)
               - entity: media_player.master_bedroom
                 name: 'Play:3'
-              # Play:1 (Kids Bedroom)
-              - entity: media_player.kids_bedroom
+              # Play:1 (Ava Bedroom)
+              - entity: media_player.ava_bedroom
                 name: 'Play:1'
             show_header_toggle: false
         type: vertical-stack
@@ -448,7 +433,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -467,7 +452,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -496,6 +481,12 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
+              - entity: light.rgb_globe_01
+                name: Floor Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
               - entity: fan.pure_hot_cool_link
                 name: Fan
                 tap_action:
@@ -504,7 +495,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -535,7 +526,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -554,7 +545,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -579,7 +570,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -606,7 +597,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -629,6 +620,12 @@ views:
                   action: toggle
                 hold_action:
                   action: more-info
+              - entity: light.rgb_globe_02
+                name: Floor Lamp
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: more-info
               - entity: cover.aaron_bedroom_blinds_curtain
                 name: Blinds
                 tap_action:
@@ -637,7 +634,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -668,7 +665,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -693,7 +690,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -718,7 +715,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -743,7 +740,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -782,7 +779,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -807,7 +804,7 @@ views:
                   action: more-info
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -844,7 +841,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -863,7 +860,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -882,7 +879,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;
@@ -901,7 +898,7 @@ views:
                   action: none
             show_name: true
             show_state: false
-            columns: 4
+            columns: 3
             style: |
               .card-header {
                 font-weight: 500;

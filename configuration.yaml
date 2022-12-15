@@ -9,8 +9,6 @@ tts:
 # Theme
 frontend:
   themes: !include themes.yaml
-  extra_module_url:
-    - /local/card-mod.js
   
 # Camera
 camera:

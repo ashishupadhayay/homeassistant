@@ -52,12 +52,23 @@
   alias: Routine - Sunrise
   trigger:
     platform: time
-    at: '07:00'
+    at: '07:30'
   action:
     - service: switch.turn_on
       data:
         entity_id:
+          - switch.outlet_washing_machine
           - switch.outlet_dishwasher
+          - switch.living_room_ts_3g_2_switch_2
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.master_bedroom_lamp
+          - light.rgb_globe_01
+          - light.rgb_globe_02
+          - light.ava_bedroom_lamp
+          - light.office_lightstrip
+          - light.living_room_floor_lamp
     - service: cover.open_cover
       data:
         entity_id:
@@ -69,16 +80,27 @@
   alias: Routine - Sunset
   trigger:
     platform: time
-    at: '19:00'
+    at: '19:30'
   action:
     - service: switch.turn_on
       data:
         entity_id:
           - switch.hallway_ts_3g_switch_1
+          - switch.hallway_ts_3g_switch_3
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.master_bedroom_lamp
+          - light.rgb_globe_01
+          - light.rgb_globe_02
+          - light.ava_bedroom_lamp
+          - light.office_lightstrip
+          - light.living_room_floor_lamp
     - service: cover.close_cover
       data:
         entity_id:
           - cover.aaron_bedroom_blinds_curtain
+          - cover.garage_door
   mode: single
 
 # Bedtime
@@ -127,6 +149,7 @@
       entity_id:
         - switch.hallway_ts_3g_switch_1
   mode: single
+
 # Wardrobe
 - id: wardrobe-motion-on
   alias: Trigger - Wardrobe MOTION ON
@@ -189,7 +212,11 @@
     platform: state
     entity_id: binary_sensor.living_room_zone_3
     to: 'off'
-    for: '00:10:00'
+    for: '00:05:00'
+  condition:
+    - condition: time
+      before: 06:00:00
+      after: '21:00:00'
   action:
     service: switch.turn_off
     data:
@@ -235,7 +262,7 @@
     platform: event
     event_type: smartthings.button
     event_data:
-      device_id: d45847a9-26f1-4da4-8ef7-82c84700bd23
+      device_id: d37cd705-87ec-476f-a30b-4d3d1c334e9e
       value: held
   action:
     service: scene.turn_on
@@ -253,13 +280,13 @@
     to: 'on'
   condition:
     - condition: time
-      before: '06:00:00'
-      after: '18:00:00'
+      before: '07:00:00'
+      after: '19:00:00'
   action:
     service: switch.turn_on
     data:
       entity_id:
-        - switch.hallway_ts_3g_switch_1
+        - switch.hallway_ts_3g_switch_2
   mode: single
 
 - id: porch-motion-off
@@ -269,11 +296,15 @@
     entity_id: binary_sensor.porch_motion_sensor_motion
     to: 'off'
     for: '00:05:00'
+  condition:
+    - condition: time
+      before: 07:00:00
+      after: '19:00:00'
   action:
     service: switch.turn_off
     data:
       entity_id:
-        - switch.hallway_ts_3g_switch_1
+        - switch.hallway_ts_3g_switch_2
   mode: single
 
 - id: porch-motion-on-notification
@@ -284,8 +315,8 @@
     to: 'on'
   condition:
     - condition: time
-      before: '20:00:00'
-      after: '08:00:00'
+      before: '17:00:00'
+      after: '09:00:00'
   action:
     - service: media_player.play_media
       data:

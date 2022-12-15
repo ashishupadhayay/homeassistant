@@ -7,6 +7,7 @@
     switch.master_bedroom_ts_1g_switch_1: off
     light.master_bedroom_lamp: off
     light.master_bedroom_rgb_ls: off
+    light.rgb_globe_01: off
     fan.pure_hot_cool_link: off
     switch.bathroom_ts_3g_switch_1: off
     switch.bathroom_ts_3g_switch_2: off
@@ -17,6 +18,7 @@
     switch.garage_ts_1g_switch_1: off
     switch.aaron_bedroom_ts_1g_switch_1: off
     light.aaron_bedroom_rgb_ls: off
+    light.rgb_globe_02: off
     switch.ava_bedroom_ts_1g_switch_1: off
     light.ava_bedroom_lamp: off
     light.ava_bedroom_rgb_ls: off
@@ -53,7 +55,8 @@
     light.master_bedroom_rgb_ls:
       state: on
       brightness: 100
-      rgb_color: [255,255,255]
+      rgb_color: [255,0,0]
+    light.rgb_globe_01: off
     fan.pure_hot_cool_link: off
     switch.bathroom_ts_3g_switch_1: off
     switch.bathroom_ts_3g_switch_2: off
@@ -66,13 +69,14 @@
     light.aaron_bedroom_rgb_ls:
       state: on
       brightness: 100
-      rgb_color: [255,255,255]
+      rgb_color: [255,0,0]
+    light.rgb_globe_02: off
     switch.ava_bedroom_ts_1g_switch_1: off
     light.ava_bedroom_lamp: off
     light.ava_bedroom_rgb_ls:
       state: on
       brightness: 100
-      rgb_color: [255,255,255]
+      rgb_color: [255,0,0]
     switch.kids_bathroom_ts_2g_switch_1: off
     switch.kids_bathroom_ts_2g_switch_2: off
     switch.kids_toilet_ts_2g_switch_1: off
@@ -91,7 +95,7 @@
     light.kitchen_rgb_ls:
       state: on
       brightness: 100
-      rgb_color: [255,255,255]
+      rgb_color: [255,0,0]
     switch.outlet_dishwasher: off
     switch.living_room_ts_3g_1_switch_3: off
     switch.pantry_ts_1g_switch_1: off
@@ -107,6 +111,7 @@
     switch.master_bedroom_ts_1g_switch_1: off
     light.master_bedroom_lamp: off
     light.master_bedroom_rgb_ls: off
+    light.rgb_globe_01: off
     fan.pure_hot_cool_link: off
     switch.bathroom_ts_3g_switch_1: off
     switch.bathroom_ts_3g_switch_2: off
@@ -117,6 +122,7 @@
     switch.garage_ts_1g_switch_1: off
     switch.aaron_bedroom_ts_1g_switch_1: off
     light.aaron_bedroom_rgb_ls: off
+    light.rgb_globe_02: off
     switch.ava_bedroom_ts_1g_switch_1: off
     light.ava_bedroom_lamp: off
     light.ava_bedroom_rgb_ls: off

@@ -92,7 +92,6 @@ switch.pantry_ts_1g_switch_1:
   icon: mdi:lightbulb
 
 # Tuya Lightstrip
-# Master Bedroom
 light.master_bedroom_rgb_ls:
   friendly_name: Master Bedroom RGB Lightstrip
   icon: mdi:led-strip-variant
@@ -114,15 +113,23 @@ cover.aaron_bedroom_blinds_curtain:
   friendly_name: Aaron Bedroom Blinds
   icon: mdi:blinds
 
+# Tuya Lights
+light.rgb_globe_01:
+  friendly_name: Master Bedroom Floor Lamp
+  icon: mdi:floor-lamp
+light.rgb_globe_02:
+  friendly_name: Aaron Bedroom Floor Lamp
+  icon: mdi:floor-lamp
+
 # Hue
 light.master_bedroom_lamp:
   friendly_name: Master Bedroom Table Lamp
   icon: mdi:lamp
 light.ava_bedroom_lamp:
-  friendly_name: Guest Bedroom Table Lamp
+  friendly_name: Ava Bedroom Table Lamp
   icon: mdi:lamp
 light.office_lightstrip:
-  friendly_name: Media Room RGB Lightstrip
+  friendly_name: Office RGB Lightstrip
   icon: mdi:led-strip-variant
 light.living_room_floor_lamp:
   friendly_name: Living Room Floor Lamp
@@ -312,12 +319,12 @@ sensor.speedtest_download:
   friendly_name: Internet
   icon: mdi:earth
 
-# Ashish Pixel 3
+# Ashish Phone
 device_tracker.ashish_phone:
   friendly_name: Ashish Phone
   icon: mdi:cellphone-android
   
-# Archana Pixel 3
+# Archana Phone
 device_tracker.archana_phone:
   friendly_name: Archana Phone
   icon: mdi:cellphone-android
